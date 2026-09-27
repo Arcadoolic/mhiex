@@ -15,7 +15,8 @@
     "prepare": "npm run build",
     "prebuild": "node generate-extractors-dictionnary.cjs",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "compare": "node compare-hi2txt.cjs"
   },
   "license": "ISC",
   "devDependencies": {

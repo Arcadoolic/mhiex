@@ -13,7 +13,10 @@ npm install
 npm run build                        # prebuild regenerates src/Extractor/index.ts, then tsc -> ./dist
 npm test                             # jest (all tests)
 ./node_modules/.bin/jest raiden      # a single extractor's test (matches test/raiden.test.ts)
+npm run compare -- <hi2txt-xml>/src/test [--hiscoredat <file>] [--rom <rom>] [--json <file>]
 ```
+
+`npm run compare` (`compare-hi2txt.cjs`, reads `./dist`) runs every extractor on the hi2txt-xml test corpus (`input/<version>/{hi,nvram}`) and diffs the result with hi2txt's decoding (`oracle/<version>/<rom>.xml`). The corpus is GPLv2: keep it outside this repo and pass its path. hi2txt output is a reference, not ground truth (it decorates some names, e.g. `[NAME]`, and uses symbols like `★` where mhiex has a plain charset).
 
 **Tests import from `../dist`, not `src`.** You must run `npm run build` after changing anything in `src/` before running jest, otherwise tests run against stale code. CI does `build` then `test`.
 

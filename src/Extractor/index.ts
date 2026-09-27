@@ -245,10 +245,20 @@ import Scobra from "./scobra";
 import Scontra from "./scontra";
 import Scramble from "./scramble";
 import Seicross from "./seicross";
+import Sf from "./sf";
 import Sf2 from "./sf2";
+import Sf2ce from "./sf2ce";
+import Sf2hf from "./sf2hf";
+import Sfa from "./sfa";
+import Sfa2 from "./sfa2";
+import Sfa3 from "./sfa3";
+import Sharrier from "./sharrier";
 import Sheriff from "./sheriff";
 import Shinobi from "./shinobi";
+import Shocktro from "./shocktro";
+import Sidepckt from "./sidepckt";
 import Simpsons from "./simpsons";
+import Slyspy from "./slyspy";
 import Smashtv from "./smashtv";
 import Snowbro2 from "./snowbro2";
 import Snowbros from "./snowbros";
@@ -539,10 +549,20 @@ const extractors: { [romName: string]: any } = {
     'scontra': Scontra,
     'scramble': Scramble,
     'seicross': Seicross,
+    'sf': Sf,
     'sf2': Sf2,
+    'sf2ce': Sf2ce,
+    'sf2hf': Sf2hf,
+    'sfa': Sfa,
+    'sfa2': Sfa2,
+    'sfa3': Sfa3,
+    'sharrier': Sharrier,
     'sheriff': Sheriff,
     'shinobi': Shinobi,
+    'shocktro': Shocktro,
+    'sidepckt': Sidepckt,
     'simpsons': Simpsons,
+    'slyspy': Slyspy,
     'smashtv': Smashtv,
     'snowbro2': Snowbro2,
     'snowbros': Snowbros,

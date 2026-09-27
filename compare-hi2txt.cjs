@@ -85,6 +85,20 @@ const CHECKED_ON_SCREEN = {
 const normScore = s => String(s ?? '').replace(/[\s,.]/g, '').replace(/^0+(?=\d)/, '')
 const normName = s => String(s ?? '').trim().replace(/\s+/g, ' ')
 
+// hi2txt draws some game tiles as symbols (♥ ★ ☺ © ♂ ♀...) where mhiex puts a plain ASCII
+// stand-in (&, space...), and frames airwolf's names with [ ]. A symbol matches any character
+// that is not a letter or digit.
+function sameNameButSymbols(mine, oracle) {
+    // Leading spaces are kept: a symbol is often drawn where mhiex puts a space
+    mine = String(mine ?? '').replace(/\s+$/, '')
+    oracle = String(oracle ?? '').replace(/\s+$/, '')
+    if (/^\[.*\]$/.test(oracle) && !/^\[.*\]$/.test(mine)) oracle = oracle.slice(1, -1).replace(/\s+$/, '')
+    const a = [...mine], b = [...oracle]
+    while (a.length < b.length) a.push(' ')
+    while (b.length < a.length) b.push(' ')
+    return a.every((c, i) => c === b[i] || (b[i].codePointAt(0) > 0x7f && !/[A-Za-z0-9]/.test(c)))
+}
+
 const isEmptyScore = s => /^0*$/.test(normScore(s))
 
 // Trailing rows scoring 0 are never-filled slots: hi2txt often hides them (line-ignore), mhiex keeps them
@@ -100,22 +114,24 @@ function compareTable(mine, oracle) {
     oracle = { ...oracle, rows: trimEmptyRows(oracle.rows, r => r.SCORE) }
     const hasName = oracle.rows.length > 0 && 'NAME' in oracle.rows[0]
     const n = Math.min(mine.length, oracle.rows.length)
-    let scores = 0, names = 0
+    let scores = 0, names = 0, symbolNames = 0
     for (let i = 0; i < n; i++) {
         if (normScore(mine[i].score) === normScore(oracle.rows[i].SCORE)) scores++
         if (!hasName || normName(mine[i].name) === normName(oracle.rows[i].NAME)) names++
+        else if (sameNameButSymbols(mine[i].name, oracle.rows[i].NAME)) symbolNames++
     }
     const sameLength = mine.length === oracle.rows.length
     let status
     if (mine.length === 0) status = 'DIFF'
     else if (sameLength && scores === n && names === n) status = 'OK'
     else if (scores === n && names === n) status = 'LENGTH'
+    else if (sameLength && scores === n && names + symbolNames === n) status = 'SYMBOLS'
     else if (scores === n) status = 'NAMES'
     else status = 'DIFF'
     return { status, scores, names, n, mineLength: mine.length, oracleLength: oracle.rows.length, hasName }
 }
 
-const rank = { OK: 0, LENGTH: 1, NAMES: 2, DIFF: 3 }
+const rank = { OK: 0, SYMBOLS: 1, LENGTH: 2, NAMES: 3, DIFF: 4 }
 
 function bestMatch(mine, oracleTables) {
     let best = null
@@ -276,7 +292,7 @@ async function main() {
 
     // One line per rom: its best result over all corpus versions
     const byRom = new Map()
-    const order = { OK: 0, CHECKED: 1, LENGTH: 2, NAMES: 3, DIFF: 4, ERROR: 5, NO_ORACLE: 6, NO_INPUT: 7 }
+    const order = { OK: 0, CHECKED: 1, SYMBOLS: 2, LENGTH: 3, NAMES: 4, DIFF: 5, ERROR: 6, NO_ORACLE: 7, NO_INPUT: 8 }
     for (const r of results) {
         const prev = byRom.get(r.rom)
         if (!prev || order[r.status] < order[prev.best.status]) byRom.set(r.rom, { best: r, all: [...(prev ? prev.all : []), r] })
@@ -290,6 +306,7 @@ async function main() {
     const labels = {
         OK: 'OK (identical to hi2txt)',
         CHECKED: 'CHECKED (differs from hi2txt, mhiex checked against the game screen)',
+        SYMBOLS: 'SYMBOLS (names differ only where hi2txt draws a symbol)',
         LENGTH: 'LENGTH (same rows, different row count)',
         NAMES: 'NAMES (scores match, names differ)',
         DIFF: 'DIFF (scores differ)',

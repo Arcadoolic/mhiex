@@ -71,6 +71,7 @@ import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
 import Captaven from "./captaven";
 import Captcomm from "./captcomm";
+import Ccastles from "./ccastles";
 import Cclimber from "./cclimber";
 import Cclimbr2 from "./cclimbr2";
 import Centiped from "./centiped";
@@ -170,6 +171,7 @@ import Kikcubic from "./kikcubic";
 import Kncljoe from "./kncljoe";
 import Knights from "./knights";
 import Kozure from "./kozure";
+import Krull from "./krull";
 import Kungfum from "./kungfum";
 import Ldrun from "./ldrun";
 import Ldrun2 from "./ldrun2";
@@ -237,6 +239,7 @@ import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
 import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
+import Reactor from "./reactor";
 import Rfjet from "./rfjet";
 import Riskchal from "./riskchal";
 import Rjammer from "./rjammer";
@@ -281,6 +284,7 @@ import Spelunkr from "./spelunkr";
 import Spf2t from "./spf2t";
 import Spidman from "./spidman";
 import Splatter from "./splatter";
+import Spnchout from "./spnchout";
 import Ssf2 from "./ssf2";
 import Ssf2t from "./ssf2t";
 import Ssoldier from "./ssoldier";
@@ -402,6 +406,7 @@ const extractors: { [romName: string]: any } = {
     'bzone': Bzone,
     'captaven': Captaven,
     'captcomm': Captcomm,
+    'ccastles': Ccastles,
     'cclimber': Cclimber,
     'cclimbr2': Cclimbr2,
     'centiped': Centiped,
@@ -501,6 +506,7 @@ const extractors: { [romName: string]: any } = {
     'kncljoe': Kncljoe,
     'knights': Knights,
     'kozure': Kozure,
+    'krull': Krull,
     'kungfum': Kungfum,
     'ldrun': Ldrun,
     'ldrun2': Ldrun2,
@@ -568,6 +574,7 @@ const extractors: { [romName: string]: any } = {
     'raiden2': Raiden2,
     'rdft': Rdft,
     'rdft2': Rdft2,
+    'reactor': Reactor,
     'rfjet': Rfjet,
     'riskchal': Riskchal,
     'rjammer': Rjammer,
@@ -612,6 +619,7 @@ const extractors: { [romName: string]: any } = {
     'spf2t': Spf2t,
     'spidman': Spidman,
     'splatter': Splatter,
+    'spnchout': Spnchout,
     'ssf2': Ssf2,
     'ssf2t': Ssf2t,
     'ssoldier': Ssoldier,

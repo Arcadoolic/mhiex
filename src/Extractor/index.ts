@@ -225,14 +225,23 @@ import Qbert from "./qbert";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
 import Rdft from "./rdft";
+import Rdft2 from "./rdft2";
+import Rfjet from "./rfjet";
+import Riskchal from "./riskchal";
+import Rjammer from "./rjammer";
 import Robocop from "./robocop";
 import Robotron from "./robotron";
+import Rodland from "./rodland";
+import Route16 from "./route16";
 import Rthunder from "./rthunder";
 import Rtype from "./rtype";
 import Rtype2 from "./rtype2";
 import Rtypeleo from "./rtypeleo";
+import Rushatck from "./rushatck";
 import Rygar from "./rygar";
+import Salamand from "./salamand";
 import Scion from "./scion";
+import Scobra from "./scobra";
 import Scontra from "./scontra";
 import Scramble from "./scramble";
 import Seicross from "./seicross";
@@ -510,14 +519,23 @@ const extractors: { [romName: string]: any } = {
     'radarscp': Radarscp,
     'raiden': Raiden,
     'rdft': Rdft,
+    'rdft2': Rdft2,
+    'rfjet': Rfjet,
+    'riskchal': Riskchal,
+    'rjammer': Rjammer,
     'robocop': Robocop,
     'robotron': Robotron,
+    'rodland': Rodland,
+    'route16': Route16,
     'rthunder': Rthunder,
     'rtype': Rtype,
     'rtype2': Rtype2,
     'rtypeleo': Rtypeleo,
+    'rushatck': Rushatck,
     'rygar': Rygar,
+    'salamand': Salamand,
     'scion': Scion,
+    'scobra': Scobra,
     'scontra': Scontra,
     'scramble': Scramble,
     'seicross': Seicross,

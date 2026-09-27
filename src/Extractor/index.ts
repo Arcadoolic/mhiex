@@ -62,11 +62,13 @@ import Batman from "./batman";
 import Battroad from "./battroad";
 import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
+import Blaster from "./blaster";
 import Bmaster from "./bmaster";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
 import Btime from "./btime";
+import Bubbles from "./bubbles";
 import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
 import Captaven from "./captaven";
@@ -170,6 +172,15 @@ import Kidniki from "./kidniki";
 import Kikcubic from "./kikcubic";
 import Kncljoe from "./kncljoe";
 import Knights from "./knights";
+import Kof2000 from "./kof2000";
+import Kof2001 from "./kof2001";
+import Kof2002 from "./kof2002";
+import Kof94 from "./kof94";
+import Kof95 from "./kof95";
+import Kof96 from "./kof96";
+import Kof97 from "./kof97";
+import Kof98 from "./kof98";
+import Kof99 from "./kof99";
 import Kozure from "./kozure";
 import Krull from "./krull";
 import Kungfum from "./kungfum";
@@ -201,15 +212,18 @@ import Momoko from "./momoko";
 import Mooncrst from "./mooncrst";
 import Moonqsr from "./moonqsr";
 import Motos from "./motos";
+import Mplanets from "./mplanets";
 import Msh from "./msh";
 import Mshuttle from "./mshuttle";
 import Mshvsf from "./mshvsf";
 import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
+import Mslug3 from "./mslug3";
 import Mslugx from "./mslugx";
 import Mvsc from "./mvsc";
 import Mwalk from "./mwalk";
 import Mysticri from "./mysticri";
+import Narc from "./narc";
 import Naughtyb from "./naughtyb";
 import Nbbatman from "./nbbatman";
 import Ninjemak from "./ninjemak";
@@ -234,9 +248,11 @@ import Poundfor from "./poundfor";
 import Psychic5 from "./psychic5";
 import Punchout from "./punchout";
 import Qbert from "./qbert";
+import Qbertqub from "./qbertqub";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
+import Rbtapper from "./rbtapper";
 import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
 import Reactor from "./reactor";
@@ -273,6 +289,7 @@ import Shocktro from "./shocktro";
 import Sidepckt from "./sidepckt";
 import Silkworm from "./silkworm";
 import Simpsons from "./simpsons";
+import Sinistar from "./sinistar";
 import Slyspy from "./slyspy";
 import Smashtv from "./smashtv";
 import Snowbro2 from "./snowbro2";
@@ -283,13 +300,16 @@ import Spelunk2 from "./spelunk2";
 import Spelunkr from "./spelunkr";
 import Spf2t from "./spf2t";
 import Spidman from "./spidman";
+import Splat from "./splat";
 import Splatter from "./splatter";
 import Spnchout from "./spnchout";
+import Spyhunt from "./spyhunt";
 import Ssf2 from "./ssf2";
 import Ssf2t from "./ssf2t";
 import Ssoldier from "./ssoldier";
 import Ssriders from "./ssriders";
 import Starforc from "./starforc";
+import Stargate from "./stargate";
 import Starwars from "./starwars";
 import Stdragon from "./stdragon";
 import Stinger from "./stinger";
@@ -297,6 +317,7 @@ import Strider from "./strider";
 import Superman from "./superman";
 import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
+import Tapper from "./tapper";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
 import Terraf from "./terraf";
@@ -311,6 +332,7 @@ import Toutrun from "./toutrun";
 import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
+import Tron from "./tron";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
 import Twocrude from "./twocrude";
@@ -397,11 +419,13 @@ const extractors: { [romName: string]: any } = {
     'battroad': Battroad,
     'bbmanw': Bbmanw,
     'bchopper': Bchopper,
+    'blaster': Blaster,
     'bmaster': Bmaster,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
     'btime': Btime,
+    'bubbles': Bubbles,
     'bublbobl': Bublbobl,
     'bzone': Bzone,
     'captaven': Captaven,
@@ -505,6 +529,15 @@ const extractors: { [romName: string]: any } = {
     'kikcubic': Kikcubic,
     'kncljoe': Kncljoe,
     'knights': Knights,
+    'kof2000': Kof2000,
+    'kof2001': Kof2001,
+    'kof2002': Kof2002,
+    'kof94': Kof94,
+    'kof95': Kof95,
+    'kof96': Kof96,
+    'kof97': Kof97,
+    'kof98': Kof98,
+    'kof99': Kof99,
     'kozure': Kozure,
     'krull': Krull,
     'kungfum': Kungfum,
@@ -536,15 +569,18 @@ const extractors: { [romName: string]: any } = {
     'mooncrst': Mooncrst,
     'moonqsr': Moonqsr,
     'motos': Motos,
+    'mplanets': Mplanets,
     'msh': Msh,
     'mshuttle': Mshuttle,
     'mshvsf': Mshvsf,
     'mslug': Mslug,
     'mslug2': Mslug2,
+    'mslug3': Mslug3,
     'mslugx': Mslugx,
     'mvsc': Mvsc,
     'mwalk': Mwalk,
     'mysticri': Mysticri,
+    'narc': Narc,
     'naughtyb': Naughtyb,
     'nbbatman': Nbbatman,
     'ninjemak': Ninjemak,
@@ -569,9 +605,11 @@ const extractors: { [romName: string]: any } = {
     'psychic5': Psychic5,
     'punchout': Punchout,
     'qbert': Qbert,
+    'qbertqub': Qbertqub,
     'radarscp': Radarscp,
     'raiden': Raiden,
     'raiden2': Raiden2,
+    'rbtapper': Rbtapper,
     'rdft': Rdft,
     'rdft2': Rdft2,
     'reactor': Reactor,
@@ -608,6 +646,7 @@ const extractors: { [romName: string]: any } = {
     'sidepckt': Sidepckt,
     'silkworm': Silkworm,
     'simpsons': Simpsons,
+    'sinistar': Sinistar,
     'slyspy': Slyspy,
     'smashtv': Smashtv,
     'snowbro2': Snowbro2,
@@ -618,13 +657,16 @@ const extractors: { [romName: string]: any } = {
     'spelunkr': Spelunkr,
     'spf2t': Spf2t,
     'spidman': Spidman,
+    'splat': Splat,
     'splatter': Splatter,
     'spnchout': Spnchout,
+    'spyhunt': Spyhunt,
     'ssf2': Ssf2,
     'ssf2t': Ssf2t,
     'ssoldier': Ssoldier,
     'ssriders': Ssriders,
     'starforc': Starforc,
+    'stargate': Stargate,
     'starwars': Starwars,
     'stdragon': Stdragon,
     'stinger': Stinger,
@@ -632,6 +674,7 @@ const extractors: { [romName: string]: any } = {
     'superman': Superman,
     'superpac': Superpac,
     'suprmrio': Suprmrio,
+    'tapper': Tapper,
     'tempest': Tempest,
     'terracre': Terracre,
     'terraf': Terraf,
@@ -646,6 +689,7 @@ const extractors: { [romName: string]: any } = {
     'trackfld': Trackfld,
     'travrusa': Travrusa,
     'troangel': Troangel,
+    'tron': Tron,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
     'twocrude': Twocrude,

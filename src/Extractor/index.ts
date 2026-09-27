@@ -200,8 +200,10 @@ import Mwalk from "./mwalk";
 import Mysticri from "./mysticri";
 import Naughtyb from "./naughtyb";
 import Nbbatman from "./nbbatman";
+import Ninjemak from "./ninjemak";
 import Nitd from "./nitd";
 import Nspirit from "./nspirit";
+import Nwarr from "./nwarr";
 import Olibochu from "./olibochu";
 import Opwolf from "./opwolf";
 import Outrun from "./outrun";
@@ -213,8 +215,11 @@ import Pang from "./pang";
 import Paperboy from "./paperboy";
 import Pbaction from "./pbaction";
 import Pengo from "./pengo";
+import Pinbo from "./pinbo";
 import Pooyan from "./pooyan";
 import Popeye from "./popeye";
+import Poundfor from "./poundfor";
+import Psychic5 from "./psychic5";
 import Punchout from "./punchout";
 import Qbert from "./qbert";
 import Radarscp from "./radarscp";
@@ -479,8 +484,10 @@ const extractors: { [romName: string]: any } = {
     'mysticri': Mysticri,
     'naughtyb': Naughtyb,
     'nbbatman': Nbbatman,
+    'ninjemak': Ninjemak,
     'nitd': Nitd,
     'nspirit': Nspirit,
+    'nwarr': Nwarr,
     'olibochu': Olibochu,
     'opwolf': Opwolf,
     'outrun': Outrun,
@@ -492,8 +499,11 @@ const extractors: { [romName: string]: any } = {
     'paperboy': Paperboy,
     'pbaction': Pbaction,
     'pengo': Pengo,
+    'pinbo': Pinbo,
     'pooyan': Pooyan,
     'popeye': Popeye,
+    'poundfor': Poundfor,
+    'psychic5': Psychic5,
     'punchout': Punchout,
     'qbert': Qbert,
     'radarscp': Radarscp,

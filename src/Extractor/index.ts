@@ -114,9 +114,13 @@ import Dynamski from "./dynamski";
 import Elevator from "./elevator";
 import Elim2 from "./elim2";
 import Elim4 from "./elim4";
+import Empcity from "./empcity";
 import Exerion from "./exerion";
+import Fcombat from "./fcombat";
 import Ffight from "./ffight";
+import Formatz from "./formatz";
 import Frogs from "./frogs";
+import Gaiden from "./gaiden";
 import Galaga from "./galaga";
 import Galaga88 from "./galaga88";
 import Galagamk from "./galagamk";
@@ -124,8 +128,14 @@ import Galaxian from "./galaxian";
 import Galivan from "./galivan";
 import Gemini from "./gemini";
 import Gng from "./gng";
+import Gradius from "./gradius";
+import Gravitar from "./gravitar";
 import Gunforce from "./gunforce";
 import Gunsmoke from "./gunsmoke";
+import Guzzler from "./guzzler";
+import Hangon from "./hangon";
+import Hbarrel from "./hbarrel";
+import Hharry from "./hharry";
 import Horizon from "./horizon";
 import Hsf2 from "./hsf2";
 import Hyperspt from "./hyperspt";
@@ -359,9 +369,13 @@ const extractors: { [romName: string]: any } = {
     'elevator': Elevator,
     'elim2': Elim2,
     'elim4': Elim4,
+    'empcity': Empcity,
     'exerion': Exerion,
+    'fcombat': Fcombat,
     'ffight': Ffight,
+    'formatz': Formatz,
     'frogs': Frogs,
+    'gaiden': Gaiden,
     'galaga': Galaga,
     'galaga88': Galaga88,
     'galagamk': Galagamk,
@@ -369,8 +383,14 @@ const extractors: { [romName: string]: any } = {
     'galivan': Galivan,
     'gemini': Gemini,
     'gng': Gng,
+    'gradius': Gradius,
+    'gravitar': Gravitar,
     'gunforce': Gunforce,
     'gunsmoke': Gunsmoke,
+    'guzzler': Guzzler,
+    'hangon': Hangon,
+    'hbarrel': Hbarrel,
+    'hharry': Hharry,
     'horizon': Horizon,
     'hsf2': Hsf2,
     'hyperspt': Hyperspt,

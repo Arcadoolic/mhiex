@@ -15,6 +15,7 @@ const fs = require('fs')
 const os = require('os')
 const path = require('path')
 const { MameHiExtractor } = require('./dist')
+const extractorClasses = require('./dist/Extractor').default
 
 function parseArgs(argv) {
     const args = { corpus: null, hiscoredat: null, rom: null, json: null }
@@ -109,20 +110,41 @@ function bestMatch(mine, oracleTables) {
     return best
 }
 
-// Lay the corpus input out the way MAME (and mhiex) expects: <dir>/hiscore/<rom>.hi, <dir>/nvram/<rom>/
+// Files an extractor reads, as set by its @Extractor decorator
+function expectedFiles(rom) {
+    const extractor = new extractorClasses[rom]()
+    return { hi: extractor.hasHi, nvram: extractor.nvramName || null }
+}
+
+// Lay the corpus input out the way MAME (and mhiex) expects: <dir>/hiscore/<rom>.hi, <dir>/nvram/<rom>/<file>.
+// Returns what is missing when the corpus has no input in the form the extractor reads.
 function stage(tmp, versionDir, rom) {
+    const expected = expectedFiles(rom)
     const dir = fs.mkdtempSync(path.join(tmp, rom + '-'))
+    const notes = []
+    const missing = []
     const hi = path.join(versionDir, 'hi', rom + '.hi')
     if (fs.existsSync(hi)) {
         fs.mkdirSync(path.join(dir, 'hiscore'))
         fs.symlinkSync(hi, path.join(dir, 'hiscore', rom + '.hi'))
+    } else if (expected.hi) {
+        missing.push('.hi')
     }
-    const nv = path.join(versionDir, 'nvram', rom)
-    if (fs.existsSync(nv)) {
-        fs.mkdirSync(path.join(dir, 'nvram'))
-        fs.symlinkSync(nv, path.join(dir, 'nvram', rom))
+    const nvDir = path.join(versionDir, 'nvram', rom)
+    if (expected.nvram) {
+        const files = fs.existsSync(nvDir) ? fs.readdirSync(nvDir) : []
+        // MAME renamed some nvram files over time (e.g. backup1 -> mainpcb_backup1)
+        const file = files.includes(expected.nvram) ? expected.nvram
+            : files.find(f => expected.nvram.endsWith('_' + f) || f.endsWith('_' + expected.nvram))
+        if (file) {
+            fs.mkdirSync(path.join(dir, 'nvram', rom), { recursive: true })
+            fs.symlinkSync(path.join(nvDir, file), path.join(dir, 'nvram', rom, expected.nvram))
+            if (file !== expected.nvram) notes.push(`nvram "${file}" read as "${expected.nvram}"`)
+        } else {
+            missing.push(`nvram/${expected.nvram}` + (files.length ? ` (corpus has ${files.join(', ')})` : ''))
+        }
     }
-    return { dir, hi: fs.existsSync(hi) ? hi : null }
+    return { dir, hi: fs.existsSync(hi) ? hi : null, notes, missing }
 }
 
 function formatTable(rows) {
@@ -161,6 +183,12 @@ async function main() {
                 results.push(result)
 
                 const staged = stage(tmp, versionDir, rom)
+                result.notes.push(...staged.notes)
+                if (staged.missing.length) {
+                    result.status = 'NO_INPUT'
+                    result.notes.push(`no ${staged.missing.join(' / ')} in the corpus`)
+                    continue
+                }
                 if (staged.hi && current && current[rom] !== undefined) {
                     const size = fs.statSync(staged.hi).size
                     if (size !== current[rom]) {
@@ -217,7 +245,7 @@ async function main() {
 
     // One line per rom: its best result over all corpus versions
     const byRom = new Map()
-    const order = { OK: 0, LENGTH: 1, NAMES: 2, DIFF: 3, ERROR: 4, NO_ORACLE: 5 }
+    const order = { OK: 0, LENGTH: 1, NAMES: 2, DIFF: 3, ERROR: 4, NO_ORACLE: 5, NO_INPUT: 6 }
     for (const r of results) {
         const prev = byRom.get(r.rom)
         if (!prev || order[r.status] < order[prev.best.status]) byRom.set(r.rom, { best: r, all: [...(prev ? prev.all : []), r] })
@@ -235,6 +263,7 @@ async function main() {
         DIFF: 'DIFF (scores differ)',
         ERROR: 'ERROR (extractor threw)',
         NO_ORACLE: 'NO_ORACLE (no hi2txt decoding to compare with)',
+        NO_INPUT: 'NO_INPUT (the corpus has no file in the form the extractor reads)',
     }
     console.log(`\n${byRom.size} roms compared (${results.length} rom/version pairs)`)
     for (const status of Object.keys(labels)) {

@@ -179,17 +179,27 @@ import Marble from "./marble";
 import Mario from "./mario";
 import Mazinger from "./mazinger";
 import Mercs from "./mercs";
+import Midres from "./midres";
+import Mightguy from "./mightguy";
 import Milliped from "./milliped";
 import Missile from "./missile";
 import Mk from "./mk";
 import Mk2 from "./mk2";
+import Mnchmobl from "./mnchmobl";
+import Momoko from "./momoko";
 import Mooncrst from "./mooncrst";
 import Moonqsr from "./moonqsr";
+import Motos from "./motos";
+import Msh from "./msh";
+import Mshuttle from "./mshuttle";
 import Mshvsf from "./mshvsf";
 import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
+import Mvsc from "./mvsc";
 import Mwalk from "./mwalk";
+import Mysticri from "./mysticri";
 import Naughtyb from "./naughtyb";
+import Nbbatman from "./nbbatman";
 import Nitd from "./nitd";
 import Nspirit from "./nspirit";
 import Olibochu from "./olibochu";
@@ -448,17 +458,27 @@ const extractors: { [romName: string]: any } = {
     'mario': Mario,
     'mazinger': Mazinger,
     'mercs': Mercs,
+    'midres': Midres,
+    'mightguy': Mightguy,
     'milliped': Milliped,
     'missile': Missile,
     'mk': Mk,
     'mk2': Mk2,
+    'mnchmobl': Mnchmobl,
+    'momoko': Momoko,
     'mooncrst': Mooncrst,
     'moonqsr': Moonqsr,
+    'motos': Motos,
+    'msh': Msh,
+    'mshuttle': Mshuttle,
     'mshvsf': Mshvsf,
     'mslug': Mslug,
     'mslug2': Mslug2,
+    'mvsc': Mvsc,
     'mwalk': Mwalk,
+    'mysticri': Mysticri,
     'naughtyb': Naughtyb,
+    'nbbatman': Nbbatman,
     'nitd': Nitd,
     'nspirit': Nspirit,
     'olibochu': Olibochu,

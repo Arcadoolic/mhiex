@@ -17,7 +17,8 @@ export interface ScoreExtra {
 
 export interface ExtractorOptions {
     name: string,
-    hi?: boolean,
+    // 'optional': read <rom>.hi when it exists (e.g. a hiscore.dat entry some romsets never pass)
+    hi?: boolean | 'optional',
     nvram?: string;
     data?: ExtractorOptionsData;
 }

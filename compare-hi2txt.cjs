@@ -162,7 +162,7 @@ function stage(tmp, versionDir, rom) {
     if (fs.existsSync(hi)) {
         fs.mkdirSync(path.join(dir, 'hiscore'))
         fs.symlinkSync(hi, path.join(dir, 'hiscore', rom + '.hi'))
-    } else if (expected.hi) {
+    } else if (expected.hi === true) {
         missing.push('.hi')
     }
     const nvDir = path.join(versionDir, 'nvram', rom)

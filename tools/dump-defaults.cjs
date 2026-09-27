@@ -68,7 +68,7 @@ function expectedFiles(rom) {
 function hasDemo(rom) {
     const expected = expectedFiles(rom)
     const demo = path.join(root, 'demo-hiscores')
-    return (!expected.hi || fs.existsSync(path.join(demo, 'hiscore', rom + '.hi')))
+    return (expected.hi !== true || fs.existsSync(path.join(demo, 'hiscore', rom + '.hi')))
         && (!expected.nvram || fs.existsSync(path.join(demo, 'nvram', rom, expected.nvram)))
 }
 

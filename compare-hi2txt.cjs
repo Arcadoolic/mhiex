@@ -74,11 +74,30 @@ function parseOracle(file) {
     return tables
 }
 
+// Roms where mhiex was checked against the game's own screen and hi2txt's decoding is the one
+// that differs: reported apart, so they do not hide new regressions.
+const CHECKED_ON_SCREEN = {
+    airattck: 'the game shows "TODAY\'S BEST 8", hi2txt reads 5 (demo-hiscores/screenshots/airattck.jpg)',
+    darius: 'the game shows "BEST 50 PLAYERS", hi2txt decodes all 102 slots (demo-hiscores/screenshots/darius.part*.jpg)',
+    hyperspt: 'hi2txt drops half the score digits and mixes the medalist table in (demo-hiscores/screenshots/hyperspt.part*.png)',
+}
+
 const normScore = s => String(s ?? '').replace(/[\s,.]/g, '').replace(/^0+(?=\d)/, '')
 const normName = s => String(s ?? '').trim().replace(/\s+/g, ' ')
 
+const isEmptyScore = s => /^0*$/.test(normScore(s))
+
+// Trailing rows scoring 0 are never-filled slots: hi2txt often hides them (line-ignore), mhiex keeps them
+function trimEmptyRows(rows, score) {
+    let end = rows.length
+    while (end > 0 && isEmptyScore(score(rows[end - 1]))) end--
+    return rows.slice(0, end)
+}
+
 // How well one mhiex table matches one oracle table
 function compareTable(mine, oracle) {
+    mine = trimEmptyRows(mine, r => r.score)
+    oracle = { ...oracle, rows: trimEmptyRows(oracle.rows, r => r.SCORE) }
     const hasName = oracle.rows.length > 0 && 'NAME' in oracle.rows[0]
     const n = Math.min(mine.length, oracle.rows.length)
     let scores = 0, names = 0
@@ -216,8 +235,20 @@ async function main() {
                     continue
                 }
 
-                const def = bestMatch(output.default || [], oracle)
+                let def = bestMatch(output.default || [], oracle)
+                // hi2txt sometimes merges what mhiex splits in extras (raiden: solo then dual) into one table
+                if (def.status !== 'OK' && output.extras) {
+                    const merged = bestMatch([...(output.default || []), ...Object.values(output.extras).flat()], oracle)
+                    if (merged.status === 'OK') {
+                        def = merged
+                        result.notes.push('hi2txt merges the default and extras tables')
+                    }
+                }
                 result.status = def.status
+                if (def.status !== 'OK' && CHECKED_ON_SCREEN[rom]) {
+                    result.status = 'CHECKED'
+                    result.notes.push(CHECKED_ON_SCREEN[rom])
+                }
                 result.default = def
                 result.extras = {}
                 for (const [id, rows] of Object.entries(output.extras || {})) {
@@ -245,7 +276,7 @@ async function main() {
 
     // One line per rom: its best result over all corpus versions
     const byRom = new Map()
-    const order = { OK: 0, LENGTH: 1, NAMES: 2, DIFF: 3, ERROR: 4, NO_ORACLE: 5, NO_INPUT: 6 }
+    const order = { OK: 0, CHECKED: 1, LENGTH: 2, NAMES: 3, DIFF: 4, ERROR: 5, NO_ORACLE: 6, NO_INPUT: 7 }
     for (const r of results) {
         const prev = byRom.get(r.rom)
         if (!prev || order[r.status] < order[prev.best.status]) byRom.set(r.rom, { best: r, all: [...(prev ? prev.all : []), r] })
@@ -258,6 +289,7 @@ async function main() {
     }
     const labels = {
         OK: 'OK (identical to hi2txt)',
+        CHECKED: 'CHECKED (differs from hi2txt, mhiex checked against the game screen)',
         LENGTH: 'LENGTH (same rows, different row count)',
         NAMES: 'NAMES (scores match, names differ)',
         DIFF: 'DIFF (scores differ)',

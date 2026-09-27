@@ -16,7 +16,7 @@ npm test                             # jest (all tests)
 npm run compare -- <hi2txt-xml>/src/test [--hiscoredat <file>] [--rom <rom>] [--json <file>]
 ```
 
-`npm run compare` (`compare-hi2txt.cjs`, reads `./dist`) runs every extractor on the hi2txt-xml test corpus (`input/<version>/{hi,nvram}`) and diffs the result with hi2txt's decoding (`oracle/<version>/<rom>.xml`). The corpus is GPLv2: keep it outside this repo and pass its path. hi2txt output is a reference, not ground truth (it decorates some names, e.g. `[NAME]`, and uses symbols like `★` where mhiex has a plain charset).
+`npm run compare` (`compare-hi2txt.cjs`, reads `./dist`) runs every extractor on the hi2txt-xml test corpus (`input/<version>/{hi,nvram}`) and diffs the result with hi2txt's decoding (`oracle/<version>/<rom>.xml`). The corpus is GPLv2: keep it outside this repo and pass its path. hi2txt output is a reference, not ground truth (it decorates some names, e.g. `[NAME]`, and uses symbols like `★` where mhiex has a plain charset). Trailing rows scoring 0 are ignored on both sides (hi2txt often hides empty slots). When a game's own screen proves mhiex right and hi2txt wrong, add the rom to `CHECKED_ON_SCREEN` in the script with the evidence (a screenshot in `demo-hiscores/screenshots/`).
 
 **Tests import from `../dist`, not `src`.** You must run `npm run build` after changing anything in `src/` before running jest, otherwise tests run against stale code. CI does `build` then `test`.
 

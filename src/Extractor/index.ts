@@ -84,12 +84,16 @@ import Contra from "./contra";
 import Cop01 from "./cop01";
 import Cosmccop from "./cosmccop";
 import Cyberlip from "./cyberlip";
+import Dacholer from "./dacholer";
 import Dangar from "./dangar";
 import Darius from "./darius";
+import Darkmist from "./darkmist";
+import Dbldynj from "./dbldynj";
 import Dbreed from "./dbreed";
 import Ddragon from "./ddragon";
 import Ddragon2 from "./ddragon2";
 import Ddsom from "./ddsom";
+import Deadang from "./deadang";
 import Defender from "./defender";
 import Demonwld from "./demonwld";
 import Digdug from "./digdug";
@@ -101,9 +105,15 @@ import Dkongjr from "./dkongjr";
 import Docastle from "./docastle";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
+import Dsoccr94 from "./dsoccr94";
 import Dspirit from "./dspirit";
+import Dstlk from "./dstlk";
+import Duckhunt from "./duckhunt";
 import Dynablst from "./dynablst";
+import Dynamski from "./dynamski";
 import Elevator from "./elevator";
+import Elim2 from "./elim2";
+import Elim4 from "./elim4";
 import Exerion from "./exerion";
 import Ffight from "./ffight";
 import Frogs from "./frogs";
@@ -319,12 +329,16 @@ const extractors: { [romName: string]: any } = {
     'cop01': Cop01,
     'cosmccop': Cosmccop,
     'cyberlip': Cyberlip,
+    'dacholer': Dacholer,
     'dangar': Dangar,
     'darius': Darius,
+    'darkmist': Darkmist,
+    'dbldynj': Dbldynj,
     'dbreed': Dbreed,
     'ddragon': Ddragon,
     'ddragon2': Ddragon2,
     'ddsom': Ddsom,
+    'deadang': Deadang,
     'defender': Defender,
     'demonwld': Demonwld,
     'digdug': Digdug,
@@ -336,9 +350,15 @@ const extractors: { [romName: string]: any } = {
     'docastle': Docastle,
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
+    'dsoccr94': Dsoccr94,
     'dspirit': Dspirit,
+    'dstlk': Dstlk,
+    'duckhunt': Duckhunt,
     'dynablst': Dynablst,
+    'dynamski': Dynamski,
     'elevator': Elevator,
+    'elim2': Elim2,
+    'elim4': Elim4,
     'exerion': Exerion,
     'ffight': Ffight,
     'frogs': Frogs,

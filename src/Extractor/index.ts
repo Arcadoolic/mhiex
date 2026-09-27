@@ -169,7 +169,11 @@ import Ldrun4 from "./ldrun4";
 import Legion from "./legion";
 import Lethalth from "./lethalth";
 import Lifefrce from "./lifefrce";
+import Loht from "./loht";
+import Lomakai from "./lomakai";
+import Lotlot from "./lotlot";
 import Magmax from "./magmax";
+import Majtitle from "./majtitle";
 import Mappy from "./mappy";
 import Marble from "./marble";
 import Mario from "./mario";
@@ -434,7 +438,11 @@ const extractors: { [romName: string]: any } = {
     'legion': Legion,
     'lethalth': Lethalth,
     'lifefrce': Lifefrce,
+    'loht': Loht,
+    'lomakai': Lomakai,
+    'lotlot': Lotlot,
     'magmax': Magmax,
+    'majtitle': Majtitle,
     'mappy': Mappy,
     'marble': Marble,
     'mario': Mario,

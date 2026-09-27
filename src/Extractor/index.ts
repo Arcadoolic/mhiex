@@ -295,12 +295,19 @@ import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
 import Tutankhm from "./tutankhm";
+import Twcup90 from "./twcup90";
+import Twocrude from "./twocrude";
+import Uccops from "./uccops";
 import Vaportra from "./vaportra";
+import Vf from "./vf";
 import Vigilant from "./vigilant";
+import Viprp1 from "./viprp1";
 import Wboy from "./wboy";
 import Willow from "./willow";
+import Wiping from "./wiping";
 import Wiz from "./wiz";
 import Xevious from "./xevious";
+import Xmcota from "./xmcota";
 import Xmen from "./xmen";
 import Xmvsf from "./xmvsf";
 import Yiear from "./yiear";
@@ -605,12 +612,19 @@ const extractors: { [romName: string]: any } = {
     'travrusa': Travrusa,
     'troangel': Troangel,
     'tutankhm': Tutankhm,
+    'twcup90': Twcup90,
+    'twocrude': Twocrude,
+    'uccops': Uccops,
     'vaportra': Vaportra,
+    'vf': Vf,
     'vigilant': Vigilant,
+    'viprp1': Viprp1,
     'wboy': Wboy,
     'willow': Willow,
+    'wiping': Wiping,
     'wiz': Wiz,
     'xevious': Xevious,
+    'xmcota': Xmcota,
     'xmen': Xmen,
     'xmvsf': Xmvsf,
     'yiear': Yiear,

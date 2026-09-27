@@ -1,7 +1,7 @@
 import {existsSync, readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
-import {ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
+import {ExtractorFiles, ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';
@@ -29,6 +29,14 @@ export default abstract class AbstractExtractor {
 
     public get scores(): Output {
         return this.output;
+    }
+
+    /** Files the extractor reads, relative to the MAME directory */
+    public get files(): ExtractorFiles {
+        return {
+            hi: this.hasHi,
+            nvram: this.nvramName ? `nvram/${this.gameName}/${this.nvramName}` : null,
+        };
     }
 
     public get name(): string {

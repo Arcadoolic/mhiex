@@ -57,6 +57,7 @@ import Baddudes from "./baddudes";
 import Bankp from "./bankp";
 import Batman from "./batman";
 import Battroad from "./battroad";
+import Bchopper from "./bchopper";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
@@ -99,6 +100,7 @@ import Galaga from "./galaga";
 import Galaga88 from "./galaga88";
 import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
+import Gemini from "./gemini";
 import Gng from "./gng";
 import Gunforce from "./gunforce";
 import Gunsmoke from "./gunsmoke";
@@ -127,6 +129,7 @@ import Marble from "./marble";
 import Mario from "./mario";
 import Mazinger from "./mazinger";
 import Mercs from "./mercs";
+import Milliped from "./milliped";
 import Missile from "./missile";
 import Mk from "./mk";
 import Mk2 from "./mk2";
@@ -135,8 +138,11 @@ import Moonqsr from "./moonqsr";
 import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
 import Mwalk from "./mwalk";
+import Naughtyb from "./naughtyb";
+import Nitd from "./nitd";
 import Nspirit from "./nspirit";
 import Olibochu from "./olibochu";
+import Opwolf from "./opwolf";
 import Outrun from "./outrun";
 import Outzone from "./outzone";
 import P47 from "./p47";
@@ -186,6 +192,7 @@ import Suprmrio from "./suprmrio";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
 import Tetris from "./tetris";
+import Thepit from "./thepit";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
 import Toki from "./toki";
@@ -264,6 +271,7 @@ const extractors: { [romName: string]: any } = {
     'bankp': Bankp,
     'batman': Batman,
     'battroad': Battroad,
+    'bchopper': Bchopper,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
@@ -306,6 +314,7 @@ const extractors: { [romName: string]: any } = {
     'galaga88': Galaga88,
     'galagamk': Galagamk,
     'galaxian': Galaxian,
+    'gemini': Gemini,
     'gng': Gng,
     'gunforce': Gunforce,
     'gunsmoke': Gunsmoke,
@@ -334,6 +343,7 @@ const extractors: { [romName: string]: any } = {
     'mario': Mario,
     'mazinger': Mazinger,
     'mercs': Mercs,
+    'milliped': Milliped,
     'missile': Missile,
     'mk': Mk,
     'mk2': Mk2,
@@ -342,8 +352,11 @@ const extractors: { [romName: string]: any } = {
     'mslug': Mslug,
     'mslug2': Mslug2,
     'mwalk': Mwalk,
+    'naughtyb': Naughtyb,
+    'nitd': Nitd,
     'nspirit': Nspirit,
     'olibochu': Olibochu,
+    'opwolf': Opwolf,
     'outrun': Outrun,
     'outzone': Outzone,
     'p47': P47,
@@ -393,6 +406,7 @@ const extractors: { [romName: string]: any } = {
     'tempest': Tempest,
     'terracre': Terracre,
     'tetris': Tetris,
+    'thepit': Thepit,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
     'toki': Toki,

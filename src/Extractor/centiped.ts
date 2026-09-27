@@ -7,6 +7,10 @@ import Extractor from '../Decorator/Extractor';
     nvram: 'earom',
 })
 export default class Centiped extends AbstractExtractor {
+    protected charset = {
+        0x00: ' ',
+    };
+
     extract() {
         this.extractNvram();
         this.extractHi();
@@ -18,7 +22,7 @@ export default class Centiped extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.nvram!.buffer.readIntLE(i * 3, 3).toString(16)),
-                name: this.nvram!.slice(i * 3 + 9, 3).toString({}, 64)
+                name: this.nvram!.slice(i * 3 + 9, 3).toString(this.charset, 64)
             });
         }
     }
@@ -29,7 +33,7 @@ export default class Centiped extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1 + startRank,
                 score: parseInt(this.hi!.buffer.readIntLE(i * 3, 3).toString(16)),
-                name: this.hi!.slice(i * 3 + 15, 3).toString({}, 64),
+                name: this.hi!.slice(i * 3 + 15, 3).toString(this.charset, 64),
             });
         }
     }

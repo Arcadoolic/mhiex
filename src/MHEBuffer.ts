@@ -229,12 +229,16 @@ export default class MHEBuffer {
     public toString(charset: {[key:number]: string} = {}, offset: number = 0, step: number = 1) {
         step = step || 1;
 
-        let newBuffer = [];
+        // A charset entry replaces the byte by its first character, or drops it when empty ('').
+        // Only the first character counts: entries like '&black-heart;' have always given '&'.
+        let result = '';
         for (const buf of this.buffer) {
-            newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf / step + offset))
+            const code = (buf / step + offset) & 0xFF;
+            // Same as before for an unmapped byte: printable ASCII, or U+FFFD past 0x7F
+            result += buf in charset ? charset[buf].charAt(0) : (code < 0x80 ? String.fromCharCode(code) : '\uFFFD');
         }
-        this.buffer = Buffer.from(newBuffer);
-        return this.buffer.toString();
+        this.buffer = Buffer.from(result);
+        return result;
     }
 
     /**

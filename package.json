@@ -16,7 +16,8 @@
     "prebuild": "node generate-extractors-dictionnary.cjs",
     "build": "tsc",
     "test": "jest",
-    "compare": "node compare-hi2txt.cjs"
+    "compare": "node compare-hi2txt.cjs",
+    "dump-defaults": "node tools/dump-defaults.cjs"
   },
   "license": "ISC",
   "devDependencies": {

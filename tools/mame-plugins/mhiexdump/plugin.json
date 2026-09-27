@@ -1,0 +1,10 @@
+{
+  "plugin": {
+    "name": "mhiexdump",
+    "description": "Dump a game's default hiscore table to a .hi file (mhiex development)",
+    "version": "1.0.0",
+    "author": "Arcadoolic",
+    "type": "plugin",
+    "start": "false"
+  }
+}

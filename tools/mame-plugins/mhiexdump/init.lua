@@ -10,6 +10,10 @@
 --   MHIEXDUMP_OUT         directory the .hi and <rom>.status files are written to (required)
 --   MHIEXDUMP_TIMEOUT     emulated seconds to wait for the table before giving up (default 120)
 --   MHIEXDUMP_SETTLE      emulated seconds the table must stay unchanged before it is written (default 3)
+--   MHIEXDUMP_SETTLE_WEAK the same when every check expects 00/00, which blank RAM passes too (default 30:
+--                         starforc's RAM sits blank for 20 s before its table appears)
+--   MHIEXDUMP_MIN         emulated seconds before anything is written (default 15): games whose checks
+--                         pass on empty RAM (e.g. 00/00) must first get through their boot tests
 local exports = {
 	name = 'mhiexdump',
 	version = '1.0.0',
@@ -30,11 +34,15 @@ function mhiexdump.startplugin()
 	local out_dir = os.getenv('MHIEXDUMP_OUT')
 	local timeout = tonumber(os.getenv('MHIEXDUMP_TIMEOUT') or '') or 120
 	local settle = tonumber(os.getenv('MHIEXDUMP_SETTLE') or '') or 3
+	local min_time = tonumber(os.getenv('MHIEXDUMP_MIN') or '') or 15
+	local settle_weak = tonumber(os.getenv('MHIEXDUMP_SETTLE_WEAK') or '') or 30
 
 	local positions = nil
 	local delay_until = 0
 	local stable_since = nil
 	local last_content = nil
+	local first_content = nil
+	local checks_passed_once = false
 	local done = false
 
 	local function status(text)
@@ -147,6 +155,17 @@ function mhiexdump.startplugin()
 		return true
 	end
 
+	-- Checks expecting 00 at both ends of every range pass on blank RAM too (starforc): they only
+	-- prove something once the table has changed from what was there when they first passed
+	local function weak_checks()
+		for _, row in ipairs(positions) do
+			if not is_marker(row) and (row.c_start ~= 0 or row.c_end ~= 0) then
+				return false
+			end
+		end
+		return true
+	end
+
 	-- RAM not yet written by the game is usually all 00 (or FF): not a table yet
 	local function is_uniform(content)
 		return content == string.rep(content:sub(1, 1), #content)
@@ -221,20 +240,33 @@ function mhiexdump.startplugin()
 		if now > timeout then
 			-- A table that passed the checks but only ever held one byte value may still be the
 			-- game's real default (e.g. all zero scores): written, flagged for a manual check
-			if last_content and check_mem() then
+			local passed = check_mem() or (weak_checks() and checks_passed_once)
+			if last_content and passed and is_uniform(last_content) then
 				write(last_content, string.format('uniform %d bytes (all 0x%02x): check it is not uninitialized RAM', #last_content, last_content:byte(1)))
+			elseif last_content and passed then
+				write(last_content, string.format('unchanged %d bytes: the 00/00 checks passed on this content from the start, check it is the table', #last_content))
 			else
 				finish('timeout')
 			end
 			return
 		end
-		if now < delay_until or not check_mem() then
+		-- 00/00 checks only hold on blank RAM, before the game writes its table (starforc: the
+		-- table's first byte is then 01): once they passed, the table is followed without them
+		local passes = now >= delay_until and check_mem()
+		checks_passed_once = checks_passed_once or passes
+		if not passes and not (weak_checks() and checks_passed_once) then
 			stable_since = nil
 			return
 		end
 		-- The checks pass as soon as the table's first and last bytes are set: wait until the
 		-- whole table stops changing, the game may still be filling it in
 		local content, forced = read_content()
+		first_content = first_content or content
+		if weak_checks() and content == first_content then
+			last_content = content
+			stable_since = nil
+			return
+		end
 		if is_uniform(content) then
 			last_content = content
 			stable_since = nil
@@ -245,7 +277,7 @@ function mhiexdump.startplugin()
 			stable_since = now
 			return
 		end
-		if now - stable_since >= settle then
+		if now - stable_since >= (weak_checks() and settle_weak or settle) and now >= min_time then
 			write(content, string.format('ok %d bytes at %.1fs', #content, now)
 				.. (forced > 0 and string.format(' (%d marker byte(s) written with their check value)', forced) or ''))
 		end

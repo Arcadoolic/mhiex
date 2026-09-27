@@ -176,6 +176,19 @@ export default class MHEBuffer {
     }
 
     /**
+     * Hex digits of the buffer, dropping every other nibble: 'odd' drops nibbles 1, 3, 5... (counted
+     * from 1, i.e. keeps each byte's low nibble), 'even' drops 2, 4, 6... (keeps the high nibble).
+     * Example: 0x457632 with 'odd' gives "562".
+     */
+    public hexDigits(nibbleSkip?: 'odd' | 'even'): string {
+        const digits = this.buffer.toString('hex');
+        if (!nibbleSkip) {
+            return digits;
+        }
+        return digits.split('').filter((_, i) => (nibbleSkip === 'odd' ? i % 2 === 1 : i % 2 === 0)).join('');
+    }
+
+    /**
      * Reverse byte array
      */
     public reverse() {

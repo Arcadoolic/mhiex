@@ -11,6 +11,7 @@ import Extractor88games from "./88games";
 import Extractor8ballact from "./8ballact";
 import Abcop from "./abcop";
 import Aburner from "./aburner";
+import Aburner2 from "./aburner2";
 import Acrobatm from "./acrobatm";
 import Actionhw from "./actionhw";
 import Ad2083 from "./ad2083";
@@ -100,6 +101,7 @@ import Galaga from "./galaga";
 import Galaga88 from "./galaga88";
 import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
+import Galivan from "./galivan";
 import Gemini from "./gemini";
 import Gng from "./gng";
 import Gunforce from "./gunforce";
@@ -122,8 +124,12 @@ import Jumpbug from "./jumpbug";
 import Kchamp from "./kchamp";
 import Kungfum from "./kungfum";
 import Ldrun from "./ldrun";
+import Ldrun2 from "./ldrun2";
+import Ldrun3 from "./ldrun3";
 import Ldrun4 from "./ldrun4";
+import Legion from "./legion";
 import Lethalth from "./lethalth";
+import Magmax from "./magmax";
 import Mappy from "./mappy";
 import Marble from "./marble";
 import Mario from "./mario";
@@ -135,6 +141,7 @@ import Mk from "./mk";
 import Mk2 from "./mk2";
 import Mooncrst from "./mooncrst";
 import Moonqsr from "./moonqsr";
+import Mshvsf from "./mshvsf";
 import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
 import Mwalk from "./mwalk";
@@ -180,6 +187,8 @@ import Solomon from "./solomon";
 import Spang from "./spang";
 import Spf2t from "./spf2t";
 import Spidman from "./spidman";
+import Ssf2 from "./ssf2";
+import Ssf2t from "./ssf2t";
 import Ssriders from "./ssriders";
 import Starforc from "./starforc";
 import Starwars from "./starwars";
@@ -196,6 +205,7 @@ import Thepit from "./thepit";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
 import Toki from "./toki";
+import Toutrun from "./toutrun";
 import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
@@ -203,6 +213,7 @@ import Tutankhm from "./tutankhm";
 import Vaportra from "./vaportra";
 import Vigilant from "./vigilant";
 import Wboy from "./wboy";
+import Willow from "./willow";
 import Wiz from "./wiz";
 import Xevious from "./xevious";
 import Xmen from "./xmen";
@@ -225,6 +236,7 @@ const extractors: { [romName: string]: any } = {
     '8ballact': Extractor8ballact,
     'abcop': Abcop,
     'aburner': Aburner,
+    'aburner2': Aburner2,
     'acrobatm': Acrobatm,
     'actionhw': Actionhw,
     'ad2083': Ad2083,
@@ -314,6 +326,7 @@ const extractors: { [romName: string]: any } = {
     'galaga88': Galaga88,
     'galagamk': Galagamk,
     'galaxian': Galaxian,
+    'galivan': Galivan,
     'gemini': Gemini,
     'gng': Gng,
     'gunforce': Gunforce,
@@ -336,8 +349,12 @@ const extractors: { [romName: string]: any } = {
     'kchamp': Kchamp,
     'kungfum': Kungfum,
     'ldrun': Ldrun,
+    'ldrun2': Ldrun2,
+    'ldrun3': Ldrun3,
     'ldrun4': Ldrun4,
+    'legion': Legion,
     'lethalth': Lethalth,
+    'magmax': Magmax,
     'mappy': Mappy,
     'marble': Marble,
     'mario': Mario,
@@ -349,6 +366,7 @@ const extractors: { [romName: string]: any } = {
     'mk2': Mk2,
     'mooncrst': Mooncrst,
     'moonqsr': Moonqsr,
+    'mshvsf': Mshvsf,
     'mslug': Mslug,
     'mslug2': Mslug2,
     'mwalk': Mwalk,
@@ -394,6 +412,8 @@ const extractors: { [romName: string]: any } = {
     'spang': Spang,
     'spf2t': Spf2t,
     'spidman': Spidman,
+    'ssf2': Ssf2,
+    'ssf2t': Ssf2t,
     'ssriders': Ssriders,
     'starforc': Starforc,
     'starwars': Starwars,
@@ -410,6 +430,7 @@ const extractors: { [romName: string]: any } = {
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
     'toki': Toki,
+    'toutrun': Toutrun,
     'trackfld': Trackfld,
     'travrusa': Travrusa,
     'troangel': Troangel,
@@ -417,6 +438,7 @@ const extractors: { [romName: string]: any } = {
     'vaportra': Vaportra,
     'vigilant': Vigilant,
     'wboy': Wboy,
+    'willow': Willow,
     'wiz': Wiz,
     'xevious': Xevious,
     'xmen': Xmen,

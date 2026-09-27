@@ -1,3 +1,4 @@
+import Extractor005 from "./005";
 import Extractor10yard from "./10yard";
 import Extractor1941 from "./1941";
 import Extractor1942 from "./1942";
@@ -9,6 +10,7 @@ import Extractor4dwarrio from "./4dwarrio";
 import Extractor88games from "./88games";
 import Extractor8ballact from "./8ballact";
 import Abcop from "./abcop";
+import Aburner from "./aburner";
 import Acrobatm from "./acrobatm";
 import Actionhw from "./actionhw";
 import Ad2083 from "./ad2083";
@@ -49,6 +51,8 @@ import Astdelux from "./astdelux";
 import Asterix from "./asterix";
 import Asteroid from "./asteroid";
 import Avsp from "./avsp";
+import Avspirit from "./avspirit";
+import Baddudes from "./baddudes";
 import Bankp from "./bankp";
 import Batman from "./batman";
 import Bombjack from "./bombjack";
@@ -148,6 +152,7 @@ import Xmvsf from "./xmvsf";
 import Zoar from "./zoar";
 
 const extractors: { [romName: string]: any } = {
+    '005': Extractor005,
     '10yard': Extractor10yard,
     '1941': Extractor1941,
     '1942': Extractor1942,
@@ -159,6 +164,7 @@ const extractors: { [romName: string]: any } = {
     '88games': Extractor88games,
     '8ballact': Extractor8ballact,
     'abcop': Abcop,
+    'aburner': Aburner,
     'acrobatm': Acrobatm,
     'actionhw': Actionhw,
     'ad2083': Ad2083,
@@ -199,6 +205,8 @@ const extractors: { [romName: string]: any } = {
     'asterix': Asterix,
     'asteroid': Asteroid,
     'avsp': Avsp,
+    'avspirit': Avspirit,
+    'baddudes': Baddudes,
     'bankp': Bankp,
     'batman': Batman,
     'bombjack': Bombjack,

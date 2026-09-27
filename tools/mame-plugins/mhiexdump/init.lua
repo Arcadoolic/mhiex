@@ -116,14 +116,33 @@ function mhiexdump.startplugin()
 		return rows
 	end
 
+	-- A 1-byte range next to real table ranges is a marker: some games keep changing it (dbreed's
+	-- is a counter during the demo). The hiscore plugin writes it back when it loads a file, so it
+	-- is left out of the checks and the stability test, and written with its check value.
+	local function is_marker(row)
+		if row.size ~= 1 then
+			return false
+		end
+		for _, other in ipairs(positions) do
+			if other.size > 1 then
+				return true
+			end
+		end
+		return false
+	end
+
 	local function check_mem()
 		for _, row in ipairs(positions) do
+			if is_marker(row) then
+				goto continue
+			end
 			if row.c_start ~= row.mem:read_u8(row.addr) then
 				return false
 			end
 			if row.c_end ~= row.mem:read_u8(row.addr + row.size - 1) then
 				return false
 			end
+			::continue::
 		end
 		return true
 	end
@@ -144,14 +163,23 @@ function mhiexdump.startplugin()
 		finish(text)
 	end
 
+	-- Markers read as their check value; `forced` counts those whose live value differed
 	local function read_content()
 		local bytes = {}
+		local forced = 0
 		for _, row in ipairs(positions) do
-			for i = 0, row.size - 1 do
-				bytes[#bytes + 1] = string.char(row.mem:read_u8(row.addr + i))
+			if is_marker(row) then
+				if row.mem:read_u8(row.addr) ~= row.c_start then
+					forced = forced + 1
+				end
+				bytes[#bytes + 1] = string.char(row.c_start)
+			else
+				for i = 0, row.size - 1 do
+					bytes[#bytes + 1] = string.char(row.mem:read_u8(row.addr + i))
+				end
 			end
 		end
-		return table.concat(bytes)
+		return table.concat(bytes), forced
 	end
 
 	reset_subscription = emu.add_machine_reset_notifier(function()
@@ -206,7 +234,7 @@ function mhiexdump.startplugin()
 		end
 		-- The checks pass as soon as the table's first and last bytes are set: wait until the
 		-- whole table stops changing, the game may still be filling it in
-		local content = read_content()
+		local content, forced = read_content()
 		if is_uniform(content) then
 			last_content = content
 			stable_since = nil
@@ -218,7 +246,8 @@ function mhiexdump.startplugin()
 			return
 		end
 		if now - stable_since >= settle then
-			write(content, string.format('ok %d bytes at %.1fs', #content, now))
+			write(content, string.format('ok %d bytes at %.1fs', #content, now)
+				.. (forced > 0 and string.format(' (%d marker byte(s) written with their check value)', forced) or ''))
 		end
 	end)
 end

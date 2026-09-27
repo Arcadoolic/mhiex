@@ -69,6 +69,7 @@ import Bouldash from "./bouldash";
 import Btime from "./btime";
 import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
+import Captaven from "./captaven";
 import Captcomm from "./captcomm";
 import Cclimber from "./cclimber";
 import Cclimbr2 from "./cclimbr2";
@@ -93,6 +94,7 @@ import Dbreed from "./dbreed";
 import Ddragon from "./ddragon";
 import Ddragon2 from "./ddragon2";
 import Ddsom from "./ddsom";
+import Ddtod from "./ddtod";
 import Deadang from "./deadang";
 import Defender from "./defender";
 import Demonwld from "./demonwld";
@@ -105,6 +107,7 @@ import Dkongjr from "./dkongjr";
 import Docastle from "./docastle";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
+import Drmario from "./drmario";
 import Dsoccr94 from "./dsoccr94";
 import Dspirit from "./dspirit";
 import Dstlk from "./dstlk";
@@ -127,12 +130,15 @@ import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
 import Galivan from "./galivan";
 import Gemini from "./gemini";
+import Ghouls from "./ghouls";
 import Gng from "./gng";
 import Gradius from "./gradius";
 import Gravitar from "./gravitar";
+import Gunforc2 from "./gunforc2";
 import Gunforce from "./gunforce";
 import Gunsmoke from "./gunsmoke";
 import Guzzler from "./guzzler";
+import Gyruss from "./gyruss";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
 import Hharry from "./hharry";
@@ -146,6 +152,7 @@ import Ikari from "./ikari";
 import Ikari3 from "./ikari3";
 import Imgfight from "./imgfight";
 import Insectx from "./insectx";
+import Inthunt from "./inthunt";
 import Intrepid from "./intrepid";
 import Invaddlx from "./invaddlx";
 import Invaders from "./invaders";
@@ -154,12 +161,14 @@ import Itaten from "./itaten";
 import Jack from "./jack";
 import Jackal from "./jackal";
 import Joust from "./joust";
+import Joust2 from "./joust2";
 import Jumpbug from "./jumpbug";
 import Karnov from "./karnov";
 import Kchamp from "./kchamp";
 import Kidniki from "./kidniki";
 import Kikcubic from "./kikcubic";
 import Kncljoe from "./kncljoe";
+import Knights from "./knights";
 import Kozure from "./kozure";
 import Kungfum from "./kungfum";
 import Ldrun from "./ldrun";
@@ -195,6 +204,7 @@ import Mshuttle from "./mshuttle";
 import Mshvsf from "./mshvsf";
 import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
+import Mslugx from "./mslugx";
 import Mvsc from "./mvsc";
 import Mwalk from "./mwalk";
 import Mysticri from "./mysticri";
@@ -224,6 +234,7 @@ import Punchout from "./punchout";
 import Qbert from "./qbert";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
+import Raiden2 from "./raiden2";
 import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
 import Rfjet from "./rfjet";
@@ -257,6 +268,7 @@ import Sheriff from "./sheriff";
 import Shinobi from "./shinobi";
 import Shocktro from "./shocktro";
 import Sidepckt from "./sidepckt";
+import Silkworm from "./silkworm";
 import Simpsons from "./simpsons";
 import Slyspy from "./slyspy";
 import Smashtv from "./smashtv";
@@ -286,6 +298,7 @@ import Terracre from "./terracre";
 import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
+import Timeplt from "./timeplt";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
 import Todruaga from "./todruaga";
@@ -309,6 +322,7 @@ import Wiz from "./wiz";
 import Xevious from "./xevious";
 import Xmcota from "./xmcota";
 import Xmen from "./xmen";
+import Xmultipl from "./xmultipl";
 import Xmvsf from "./xmvsf";
 import Yiear from "./yiear";
 import Youjyudn from "./youjyudn";
@@ -386,6 +400,7 @@ const extractors: { [romName: string]: any } = {
     'btime': Btime,
     'bublbobl': Bublbobl,
     'bzone': Bzone,
+    'captaven': Captaven,
     'captcomm': Captcomm,
     'cclimber': Cclimber,
     'cclimbr2': Cclimbr2,
@@ -410,6 +425,7 @@ const extractors: { [romName: string]: any } = {
     'ddragon': Ddragon,
     'ddragon2': Ddragon2,
     'ddsom': Ddsom,
+    'ddtod': Ddtod,
     'deadang': Deadang,
     'defender': Defender,
     'demonwld': Demonwld,
@@ -422,6 +438,7 @@ const extractors: { [romName: string]: any } = {
     'docastle': Docastle,
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
+    'drmario': Drmario,
     'dsoccr94': Dsoccr94,
     'dspirit': Dspirit,
     'dstlk': Dstlk,
@@ -444,12 +461,15 @@ const extractors: { [romName: string]: any } = {
     'galaxian': Galaxian,
     'galivan': Galivan,
     'gemini': Gemini,
+    'ghouls': Ghouls,
     'gng': Gng,
     'gradius': Gradius,
     'gravitar': Gravitar,
+    'gunforc2': Gunforc2,
     'gunforce': Gunforce,
     'gunsmoke': Gunsmoke,
     'guzzler': Guzzler,
+    'gyruss': Gyruss,
     'hangon': Hangon,
     'hbarrel': Hbarrel,
     'hharry': Hharry,
@@ -463,6 +483,7 @@ const extractors: { [romName: string]: any } = {
     'ikari3': Ikari3,
     'imgfight': Imgfight,
     'insectx': Insectx,
+    'inthunt': Inthunt,
     'intrepid': Intrepid,
     'invaddlx': Invaddlx,
     'invaders': Invaders,
@@ -471,12 +492,14 @@ const extractors: { [romName: string]: any } = {
     'jack': Jack,
     'jackal': Jackal,
     'joust': Joust,
+    'joust2': Joust2,
     'jumpbug': Jumpbug,
     'karnov': Karnov,
     'kchamp': Kchamp,
     'kidniki': Kidniki,
     'kikcubic': Kikcubic,
     'kncljoe': Kncljoe,
+    'knights': Knights,
     'kozure': Kozure,
     'kungfum': Kungfum,
     'ldrun': Ldrun,
@@ -512,6 +535,7 @@ const extractors: { [romName: string]: any } = {
     'mshvsf': Mshvsf,
     'mslug': Mslug,
     'mslug2': Mslug2,
+    'mslugx': Mslugx,
     'mvsc': Mvsc,
     'mwalk': Mwalk,
     'mysticri': Mysticri,
@@ -541,6 +565,7 @@ const extractors: { [romName: string]: any } = {
     'qbert': Qbert,
     'radarscp': Radarscp,
     'raiden': Raiden,
+    'raiden2': Raiden2,
     'rdft': Rdft,
     'rdft2': Rdft2,
     'rfjet': Rfjet,
@@ -574,6 +599,7 @@ const extractors: { [romName: string]: any } = {
     'shinobi': Shinobi,
     'shocktro': Shocktro,
     'sidepckt': Sidepckt,
+    'silkworm': Silkworm,
     'simpsons': Simpsons,
     'slyspy': Slyspy,
     'smashtv': Smashtv,
@@ -603,6 +629,7 @@ const extractors: { [romName: string]: any } = {
     'terraf': Terraf,
     'tetris': Tetris,
     'thepit': Thepit,
+    'timeplt': Timeplt,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
     'todruaga': Todruaga,
@@ -626,6 +653,7 @@ const extractors: { [romName: string]: any } = {
     'xevious': Xevious,
     'xmcota': Xmcota,
     'xmen': Xmen,
+    'xmultipl': Xmultipl,
     'xmvsf': Xmvsf,
     'yiear': Yiear,
     'youjyudn': Youjyudn,

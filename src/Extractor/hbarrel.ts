@@ -7,12 +7,15 @@ import Extractor from "../Decorator/Extractor";
     name: 'hbarrel'
 })
 export default class Hbarrel extends AbstractExtractor {
+    protected scoresOffset = 0;
+    protected namesOffset = 48;
+
     extract(): this {
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(i * 4, 4).toHexNumber(),
-                name: this.hi!.slice(48 + i * 4 + 1, 3).toString({0x00: ' '}).trim()
+                score: this.hi!.slice(this.scoresOffset + i * 4, 4).toHexNumber(),
+                name: this.hi!.slice(this.namesOffset + i * 4 + 1, 3).toString({0x00: ' '}).trim()
             });
         }
         return this;

@@ -136,9 +136,12 @@ import Guzzler from "./guzzler";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
 import Hharry from "./hharry";
+import Hook from "./hook";
+import Horekid from "./horekid";
 import Horizon from "./horizon";
 import Hsf2 from "./hsf2";
 import Hyperspt from "./hyperspt";
+import Iceclimb from "./iceclimb";
 import Ikari from "./ikari";
 import Ikari3 from "./ikari3";
 import Imgfight from "./imgfight";
@@ -147,11 +150,17 @@ import Intrepid from "./intrepid";
 import Invaddlx from "./invaddlx";
 import Invaders from "./invaders";
 import Invadpt2 from "./invadpt2";
+import Itaten from "./itaten";
 import Jack from "./jack";
 import Jackal from "./jackal";
 import Joust from "./joust";
 import Jumpbug from "./jumpbug";
+import Karnov from "./karnov";
 import Kchamp from "./kchamp";
+import Kidniki from "./kidniki";
+import Kikcubic from "./kikcubic";
+import Kncljoe from "./kncljoe";
+import Kozure from "./kozure";
 import Kungfum from "./kungfum";
 import Ldrun from "./ldrun";
 import Ldrun2 from "./ldrun2";
@@ -159,6 +168,7 @@ import Ldrun3 from "./ldrun3";
 import Ldrun4 from "./ldrun4";
 import Legion from "./legion";
 import Lethalth from "./lethalth";
+import Lifefrce from "./lifefrce";
 import Magmax from "./magmax";
 import Mappy from "./mappy";
 import Marble from "./marble";
@@ -391,9 +401,12 @@ const extractors: { [romName: string]: any } = {
     'hangon': Hangon,
     'hbarrel': Hbarrel,
     'hharry': Hharry,
+    'hook': Hook,
+    'horekid': Horekid,
     'horizon': Horizon,
     'hsf2': Hsf2,
     'hyperspt': Hyperspt,
+    'iceclimb': Iceclimb,
     'ikari': Ikari,
     'ikari3': Ikari3,
     'imgfight': Imgfight,
@@ -402,11 +415,17 @@ const extractors: { [romName: string]: any } = {
     'invaddlx': Invaddlx,
     'invaders': Invaders,
     'invadpt2': Invadpt2,
+    'itaten': Itaten,
     'jack': Jack,
     'jackal': Jackal,
     'joust': Joust,
     'jumpbug': Jumpbug,
+    'karnov': Karnov,
     'kchamp': Kchamp,
+    'kidniki': Kidniki,
+    'kikcubic': Kikcubic,
+    'kncljoe': Kncljoe,
+    'kozure': Kozure,
     'kungfum': Kungfum,
     'ldrun': Ldrun,
     'ldrun2': Ldrun2,
@@ -414,6 +433,7 @@ const extractors: { [romName: string]: any } = {
     'ldrun4': Ldrun4,
     'legion': Legion,
     'lethalth': Lethalth,
+    'lifefrce': Lifefrce,
     'magmax': Magmax,
     'mappy': Mappy,
     'marble': Marble,

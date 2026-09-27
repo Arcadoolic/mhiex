@@ -45,6 +45,7 @@ import Arknoid2 from "./arknoid2";
 import Armedf from "./armedf";
 import Armorcar from "./armorcar";
 import Armwar from "./armwar";
+import Astdelux from "./astdelux";
 import Asterix from "./asterix";
 import Asteroid from "./asteroid";
 import Avsp from "./avsp";
@@ -113,6 +114,7 @@ import Pacland from "./pacland";
 import Pacmania from "./pacmania";
 import Pang from "./pang";
 import Paperboy from "./paperboy";
+import Pbaction from "./pbaction";
 import Pengo from "./pengo";
 import Popeye from "./popeye";
 import Punchout from "./punchout";
@@ -193,6 +195,7 @@ const extractors: { [romName: string]: any } = {
     'armedf': Armedf,
     'armorcar': Armorcar,
     'armwar': Armwar,
+    'astdelux': Astdelux,
     'asterix': Asterix,
     'asteroid': Asteroid,
     'avsp': Avsp,
@@ -261,6 +264,7 @@ const extractors: { [romName: string]: any } = {
     'pacmania': Pacmania,
     'pang': Pang,
     'paperboy': Paperboy,
+    'pbaction': Pbaction,
     'pengo': Pengo,
     'popeye': Popeye,
     'punchout': Punchout,

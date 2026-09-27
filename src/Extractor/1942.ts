@@ -26,12 +26,13 @@ export default class Extractor1942 extends AbstractExtractor {
         let currentByte = 0;
         for (let i = 0; i < 25; i++) {
             this.scores.default.push({
-                rank: i + 1,
+                rank: this.hi!.buffer.readUInt8(currentByte) + 1,
                 score: this.hi!.slice(currentByte + 1, 4).toHexNumber(),
                 name: this.hi!.slice(currentByte + 5, 8).toString(this.charset, 55),
             });
             currentByte += 16;
         }
+        this.scores.default.sort((a, b) => a.rank - b.rank);
         return this;
     }
 }

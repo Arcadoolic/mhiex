@@ -39,29 +39,18 @@ export default class MHEBuffer {
         return this.trimStart(trimNeedle).trimEnd(trimNeedle);
     }
 
+    /**
+     * Atari base-40: every 2 bytes (unsigned, big-endian) hold 3 characters, value = c1 * 1600 + c2 * 40 + c3.
+     * 0 is a space and 1-26 are A-Z (codes are offset from 0x40, as hi2txt does).
+     */
     public decodeBase40(): string {
-        let originValue = this.buffer.readIntBE(0, this.buffer.byteLength);
-        const ctable = [
-            ['\0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ', '\n'],
-            ['\0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '(', '!', '@', '#', ',', '.', '?', '/', '*', ')', '<', '>']
-        ];
-        let shiftState = 0;
         let result = '';
-        let tmp = Math.round(originValue/ 1600);
-        if (tmp === 39) {
-            shiftState = 1;
-        } else {
-            result += ctable[shiftState][tmp];
+        for (let i = 0; i + 1 < this.buffer.byteLength; i += 2) {
+            const value = this.buffer.readUInt16BE(i);
+            for (const code of [Math.floor(value / 1600), Math.floor(value / 40) % 40, value % 40]) {
+                result += code === 0 ? ' ' : String.fromCharCode(0x40 + code);
+            }
         }
-        tmp = Math.round((originValue - tmp * 1600) / 40);
-        if (tmp === 39) {
-            shiftState = 1;
-        } else {
-            result += ctable[shiftState][tmp];
-            shiftState = 0;
-        }
-        tmp = Math.round(originValue % 40);
-        result += (tmp !== 39) ? ctable[shiftState][tmp] : '';
         return result;
     }
 

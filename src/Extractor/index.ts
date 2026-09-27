@@ -7,6 +7,7 @@ import Extractor1944 from "./1944";
 import Extractor1945kiii from "./1945kiii";
 import Extractor19xx from "./19xx";
 import Extractor4dwarrio from "./4dwarrio";
+import Extractor64street from "./64street";
 import Extractor88games from "./88games";
 import Extractor8ballact from "./8ballact";
 import Abcop from "./abcop";
@@ -52,13 +53,16 @@ import Astdelux from "./astdelux";
 import Asterix from "./asterix";
 import Asteroid from "./asteroid";
 import Astyanax from "./astyanax";
+import Atetris from "./atetris";
 import Avsp from "./avsp";
 import Avspirit from "./avspirit";
 import Baddudes from "./baddudes";
 import Bankp from "./bankp";
 import Batman from "./batman";
 import Battroad from "./battroad";
+import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
+import Bmaster from "./bmaster";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
@@ -67,11 +71,17 @@ import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
 import Captcomm from "./captcomm";
 import Cclimber from "./cclimber";
+import Cclimbr2 from "./cclimbr2";
 import Centiped from "./centiped";
+import Challeng from "./challeng";
 import Chasehq from "./chasehq";
+import Citycon from "./citycon";
+import Cluclu from "./cluclu";
 import Cninja from "./cninja";
+import Cobracom from "./cobracom";
 import Columns from "./columns";
 import Contra from "./contra";
+import Cop01 from "./cop01";
 import Cosmccop from "./cosmccop";
 import Cyberlip from "./cyberlip";
 import Dangar from "./dangar";
@@ -232,6 +242,7 @@ const extractors: { [romName: string]: any } = {
     '1945kiii': Extractor1945kiii,
     '19xx': Extractor19xx,
     '4dwarrio': Extractor4dwarrio,
+    '64street': Extractor64street,
     '88games': Extractor88games,
     '8ballact': Extractor8ballact,
     'abcop': Abcop,
@@ -277,13 +288,16 @@ const extractors: { [romName: string]: any } = {
     'asterix': Asterix,
     'asteroid': Asteroid,
     'astyanax': Astyanax,
+    'atetris': Atetris,
     'avsp': Avsp,
     'avspirit': Avspirit,
     'baddudes': Baddudes,
     'bankp': Bankp,
     'batman': Batman,
     'battroad': Battroad,
+    'bbmanw': Bbmanw,
     'bchopper': Bchopper,
+    'bmaster': Bmaster,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
@@ -292,11 +306,17 @@ const extractors: { [romName: string]: any } = {
     'bzone': Bzone,
     'captcomm': Captcomm,
     'cclimber': Cclimber,
+    'cclimbr2': Cclimbr2,
     'centiped': Centiped,
+    'challeng': Challeng,
     'chasehq': Chasehq,
+    'citycon': Citycon,
+    'cluclu': Cluclu,
     'cninja': Cninja,
+    'cobracom': Cobracom,
     'columns': Columns,
     'contra': Contra,
+    'cop01': Cop01,
     'cosmccop': Cosmccop,
     'cyberlip': Cyberlip,
     'dangar': Dangar,

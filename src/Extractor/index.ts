@@ -264,10 +264,14 @@ import Snowbro2 from "./snowbro2";
 import Snowbros from "./snowbros";
 import Solomon from "./solomon";
 import Spang from "./spang";
+import Spelunk2 from "./spelunk2";
+import Spelunkr from "./spelunkr";
 import Spf2t from "./spf2t";
 import Spidman from "./spidman";
+import Splatter from "./splatter";
 import Ssf2 from "./ssf2";
 import Ssf2t from "./ssf2t";
+import Ssoldier from "./ssoldier";
 import Ssriders from "./ssriders";
 import Starforc from "./starforc";
 import Starwars from "./starwars";
@@ -279,10 +283,12 @@ import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
+import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
+import Todruaga from "./todruaga";
 import Toki from "./toki";
 import Toutrun from "./toutrun";
 import Trackfld from "./trackfld";
@@ -568,10 +574,14 @@ const extractors: { [romName: string]: any } = {
     'snowbros': Snowbros,
     'solomon': Solomon,
     'spang': Spang,
+    'spelunk2': Spelunk2,
+    'spelunkr': Spelunkr,
     'spf2t': Spf2t,
     'spidman': Spidman,
+    'splatter': Splatter,
     'ssf2': Ssf2,
     'ssf2t': Ssf2t,
+    'ssoldier': Ssoldier,
     'ssriders': Ssriders,
     'starforc': Starforc,
     'starwars': Starwars,
@@ -583,10 +593,12 @@ const extractors: { [romName: string]: any } = {
     'suprmrio': Suprmrio,
     'tempest': Tempest,
     'terracre': Terracre,
+    'terraf': Terraf,
     'tetris': Tetris,
     'thepit': Thepit,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
+    'todruaga': Todruaga,
     'toki': Toki,
     'toutrun': Toutrun,
     'trackfld': Trackfld,

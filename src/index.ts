@@ -1,4 +1,7 @@
 import AbstractExtractor from "./AbstractExtractor";
+import {ExtractorFiles} from "./interfaces";
+
+export type {ExtractorFiles} from "./interfaces";
 import extractors from "./Extractor";
 
 
@@ -11,6 +14,15 @@ export class MameHiExtractor {
      */
     public async get(romName: string): Promise<AbstractExtractor | undefined | void> {
         return (new extractors[romName]()).init(this.dir)
+    }
+
+    /**
+     * Files the extractor of a game reads (its .hi, its nvram, or both), without reading them;
+     * null when there is no extractor
+     * @param romName
+     */
+    public files(romName: string): ExtractorFiles | null {
+        return extractors[romName] ? (new extractors[romName]() as AbstractExtractor).files : null
     }
 
     /**

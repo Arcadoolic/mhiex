@@ -34,12 +34,16 @@ export default class Hyperspt extends AbstractExtractor {
             }
         }
         currentByte += 6; // Skip a spacing (6B)
-        for (let i = 0; i < 23; i++) { // Next 160 groups of 5 bytes are default scores
-            this.output.default.push({
-                rank: i + 1,
-                score: parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
+        // 23 records of 6 bytes: the 3 "HYPER MEDALIST" (title screen), then the "TODAYS BEST 10".
+        // The last 10 records are never displayed by the game.
+        this.output.extras.medalist = [];
+        for (let i = 0; i < 13; i++) {
+            const score = {
+                rank: i < 3 ? i + 1 : i - 2,
+                score: parseInt(this.nvram!.buffer.readUIntBE(currentByte, 3).toString(16)) * 10,
                 name: this.nvram!.slice(currentByte + 3, 3).toString({}, 48)
-            });
+            };
+            (i < 3 ? this.output.extras.medalist : this.output.default).push(score);
             currentByte += 6;
         }
         return this;

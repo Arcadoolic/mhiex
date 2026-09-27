@@ -1,11 +1,11 @@
-import {readFileSync} from "fs";
+import {existsSync, readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
-import {ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
+import {ExtractorFiles, ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';
-    private hasHi = false;
+    private hasHi: boolean | 'optional' = false;
     private nvramName = '';
 
     protected hi?: MHEBuffer;
@@ -15,8 +15,9 @@ export default abstract class AbstractExtractor {
     protected output: Output = {default: []};
 
     public init(filePath: string) {
-        if (this.hasHi) {
-            this.hi = new MHEBuffer(readFileSync(join(filePath, 'hiscore', this.gameName + '.hi')));
+        const hiPath = join(filePath, 'hiscore', this.gameName + '.hi');
+        if (this.hasHi === true || (this.hasHi === 'optional' && existsSync(hiPath))) {
+            this.hi = new MHEBuffer(readFileSync(hiPath));
         }
         if (this.nvramName) {
             this.nvram = new MHEBuffer(readFileSync(join(filePath, 'nvram', this.gameName, this.nvramName)))
@@ -28,6 +29,14 @@ export default abstract class AbstractExtractor {
 
     public get scores(): Output {
         return this.output;
+    }
+
+    /** Files the extractor reads, relative to the MAME directory */
+    public get files(): ExtractorFiles {
+        return {
+            hi: this.hasHi,
+            nvram: this.nvramName ? `nvram/${this.gameName}/${this.nvramName}` : null,
+        };
     }
 
     public get name(): string {

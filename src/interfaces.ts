@@ -15,9 +15,17 @@ export interface ScoreExtra {
     [key: string]: string|number;
 }
 
+export interface ExtractorFiles {
+    // true: <rom>.hi is required; 'optional': read when it exists
+    hi: boolean | 'optional';
+    // nvram/<rom>/<file>, or null
+    nvram: string | null;
+}
+
 export interface ExtractorOptions {
     name: string,
-    hi?: boolean,
+    // 'optional': read <rom>.hi when it exists (e.g. a hiscore.dat entry some romsets never pass)
+    hi?: boolean | 'optional',
     nvram?: string;
     data?: ExtractorOptionsData;
 }

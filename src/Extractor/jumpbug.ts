@@ -5,13 +5,17 @@ import Extractor from "../Decorator/Extractor";
     name: 'jumpbug'
 })
 export default class Jumpbug extends AbstractExtractor {
+    protected charset = {
+        0x5E: '',
+    };
+
     extract(): this {
         // Get only names
         for (let i = 0; i < 3; i++) {
             this.scores.default.push({
                 rank: i + 1,
                 score: 0,
-                name: this.hi!.slice(12 + i * 3, 3).toStringLE({},-63)
+                name: this.hi!.slice(12 + i * 3, 3).toStringLE(this.charset, -63)
             });
         }
 

@@ -33,12 +33,17 @@ export default class Trackfld extends AbstractExtractor {
             }
         }
 
-        for (let i = 0; i < 160; i++) { // Next 160 groups of 5 bytes are default scores
-            this.output.default.push({
-                rank: i + 1,
-                score: Number.parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.nvram!.slice(currentByte + 3, 2).decodeBase32()
-            });
+        // Next 160 groups of 5 bytes are the ranking ("THE BEST 200" in game). A slot never
+        // filled scores 0: it is not part of the ranking.
+        for (let i = 0; i < 160; i++) {
+            const score = Number.parseInt(this.nvram!.buffer.readUIntBE(currentByte, 3).toString(16)) * 10;
+            if (score > 0) {
+                this.output.default.push({
+                    rank: i + 1,
+                    score,
+                    name: this.nvram!.slice(currentByte + 3, 2).decodeBase32()
+                });
+            }
             currentByte += 5;
         }
         return this;

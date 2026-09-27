@@ -1,6 +1,6 @@
 {
   "name": "@arcadoolic/mhiex",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "snosky",
   "contributors": [
     "Arcadoolic (https://github.com/Arcadoolic)"
@@ -15,7 +15,9 @@
     "prepare": "npm run build",
     "prebuild": "node generate-extractors-dictionnary.cjs",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "compare": "node compare-hi2txt.cjs",
+    "dump-defaults": "node tools/dump-defaults.cjs"
   },
   "license": "ISC",
   "devDependencies": {

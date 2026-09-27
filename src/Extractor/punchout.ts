@@ -3,12 +3,17 @@ import Extractor from "../Decorator/Extractor";
 
 @Extractor({
     name: 'punchout',
+    // The 0.289 hiscore.dat entry expects 04 as the table's last byte, the game leaves 03 there:
+    // the hiscore plugin never writes punchout.hi. The nvram ranking is enough on its own.
+    hi: 'optional',
     nvram: 'nvram'
 })
 export default class Punchout extends AbstractExtractor {
     extract(): this {
         this.extractNvram();
-        this.extractHi();
+        if (this.hi) {
+            this.extractHi();
+        }
         return this;
     }
 

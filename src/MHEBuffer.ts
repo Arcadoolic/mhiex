@@ -39,29 +39,18 @@ export default class MHEBuffer {
         return this.trimStart(trimNeedle).trimEnd(trimNeedle);
     }
 
+    /**
+     * Atari base-40: every 2 bytes (unsigned, big-endian) hold 3 characters, value = c1 * 1600 + c2 * 40 + c3.
+     * 0 is a space and 1-26 are A-Z (codes are offset from 0x40, as hi2txt does).
+     */
     public decodeBase40(): string {
-        let originValue = this.buffer.readIntBE(0, this.buffer.byteLength);
-        const ctable = [
-            ['\0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ', '\n'],
-            ['\0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '(', '!', '@', '#', ',', '.', '?', '/', '*', ')', '<', '>']
-        ];
-        let shiftState = 0;
         let result = '';
-        let tmp = Math.round(originValue/ 1600);
-        if (tmp === 39) {
-            shiftState = 1;
-        } else {
-            result += ctable[shiftState][tmp];
+        for (let i = 0; i + 1 < this.buffer.byteLength; i += 2) {
+            const value = this.buffer.readUInt16BE(i);
+            for (const code of [Math.floor(value / 1600), Math.floor(value / 40) % 40, value % 40]) {
+                result += code === 0 ? ' ' : String.fromCharCode(0x40 + code);
+            }
         }
-        tmp = Math.round((originValue - tmp * 1600) / 40);
-        if (tmp === 39) {
-            shiftState = 1;
-        } else {
-            result += ctable[shiftState][tmp];
-            shiftState = 0;
-        }
-        tmp = Math.round(originValue % 40);
-        result += (tmp !== 39) ? ctable[shiftState][tmp] : '';
         return result;
     }
 
@@ -187,6 +176,19 @@ export default class MHEBuffer {
     }
 
     /**
+     * Hex digits of the buffer, dropping every other nibble: 'odd' drops nibbles 1, 3, 5... (counted
+     * from 1, i.e. keeps each byte's low nibble), 'even' drops 2, 4, 6... (keeps the high nibble).
+     * Example: 0x457632 with 'odd' gives "562".
+     */
+    public hexDigits(nibbleSkip?: 'odd' | 'even'): string {
+        const digits = this.buffer.toString('hex');
+        if (!nibbleSkip) {
+            return digits;
+        }
+        return digits.split('').filter((_, i) => (nibbleSkip === 'odd' ? i % 2 === 1 : i % 2 === 0)).join('');
+    }
+
+    /**
      * Reverse byte array
      */
     public reverse() {
@@ -240,12 +242,16 @@ export default class MHEBuffer {
     public toString(charset: {[key:number]: string} = {}, offset: number = 0, step: number = 1) {
         step = step || 1;
 
-        let newBuffer = [];
+        // A charset entry replaces the byte by its first character, or drops it when empty ('').
+        // Only the first character counts: entries like '&black-heart;' have always given '&'.
+        let result = '';
         for (const buf of this.buffer) {
-            newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf / step + offset))
+            const code = (buf / step + offset) & 0xFF;
+            // Same as before for an unmapped byte: printable ASCII, or U+FFFD past 0x7F
+            result += buf in charset ? charset[buf].charAt(0) : (code < 0x80 ? String.fromCharCode(code) : '\uFFFD');
         }
-        this.buffer = Buffer.from(newBuffer);
-        return this.buffer.toString();
+        this.buffer = Buffer.from(result);
+        return result;
     }
 
     /**

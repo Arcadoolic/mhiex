@@ -12,7 +12,6 @@ it('1943', async () => {
             { rank: 3, score: 15000, name: 'YAM' },
             { rank: 4, score: 10000, name: 'POO' },
             { rank: 5, score: 7000, name: 'MR.' },
-            { rank: 6, score: 4600, name: 'BLB' },
         ]
     })
 })

@@ -14,7 +14,7 @@ export default class Outrun extends AbstractExtractor {
         for (let i = 0; i < 7; i++) {
             this.output.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 4).toHexNumber() * 100,
+                score: this.hi!.slice(currentByte, 4).toHexNumber(),
                 name: this.hi!.slice(currentByte + 4, 3).toString(this.charset)
             })
             currentByte += 14

@@ -13,7 +13,8 @@ export default class Appoooh extends AbstractExtractor {
 
     extract(): this {
         let currentByte = 10;
-        for (let i = 0; i < 21; i++) {
+        // 20 records: hiscore.dat saves 0xdc bytes after the top score, the 21st one is not in the file
+        for (let i = 0; i < 20; i++) {
             this.output.default.push({
                 rank: i + 1,
                 name: this.hi!.slice(currentByte, 3).toString(this.charset),

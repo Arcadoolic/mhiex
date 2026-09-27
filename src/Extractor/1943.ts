@@ -16,7 +16,8 @@ export default class Extractor1943 extends AbstractExtractor {
     };
 
     extract(): this {
-        for (let i = 0; i < 6; i++) {
+        // The game shows "RANKING BEST 5": the 6th record is not part of the ranking
+        for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(i * 16, 8).decodeBCD(),

@@ -10,7 +10,8 @@ export default class Pang extends AbstractExtractor {
     };
 
     extract(): this {
-        for (let i = 0; i < 9; i++) {
+        // 10 records: hiscore.dat leaves the last 6 bytes of the 10th out, its score and name are there
+        for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.slice(i * 16, 3).readIntBE().toString(16)) * 10,

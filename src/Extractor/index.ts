@@ -224,6 +224,7 @@ import Punchout from "./punchout";
 import Qbert from "./qbert";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
+import Rdft from "./rdft";
 import Robocop from "./robocop";
 import Robotron from "./robotron";
 import Rthunder from "./rthunder";
@@ -508,6 +509,7 @@ const extractors: { [romName: string]: any } = {
     'qbert': Qbert,
     'radarscp': Radarscp,
     'raiden': Raiden,
+    'rdft': Rdft,
     'robocop': Robocop,
     'robotron': Robotron,
     'rthunder': Rthunder,

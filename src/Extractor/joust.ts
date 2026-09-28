@@ -12,10 +12,12 @@ export default class Joust extends AbstractExtractor {
         0x32: ':'
     };
 
+    protected tableOffset = 318;
+
     extract(): this {
         // Use only nvram, because hi is a duplicate of extra score 'Daily'
 
-        let currentByte = 318; // Skip debug values
+        let currentByte = this.tableOffset; // Skip debug values
         this.output.default.push({
             rank: 1,
             name: this.nvram!.slice(currentByte, 40).nibbleSkip(false).toString(this.charset, 54),

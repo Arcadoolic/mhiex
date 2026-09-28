@@ -3,8 +3,9 @@ import Extractor from "../Decorator/Extractor";
 
 @Extractor({
     name: 'punchout',
-    // The 0.289 hiscore.dat entry expects 04 as the table's last byte, the game leaves 03 there:
-    // the hiscore plugin never writes punchout.hi. The nvram ranking is enough on its own.
+    // The 0.289 hiscore.dat entry checks the table's last byte, rank 50's score, against 04: the
+    // hiscore plugin only saves punchout.hi for some scores. MAUI's corrected hiscore.dat (installed
+    // by the configuration pack) ends the range one byte further; either file is read.
     hi: 'optional',
     nvram: 'nvram'
 })

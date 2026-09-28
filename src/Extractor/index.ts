@@ -62,6 +62,7 @@ import Batman from "./batman";
 import Battroad from "./battroad";
 import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
+import Bigrun from "./bigrun";
 import Blaster from "./blaster";
 import Bmaster from "./bmaster";
 import Bombjack from "./bombjack";
@@ -79,6 +80,7 @@ import Cclimbr2 from "./cclimbr2";
 import Centiped from "./centiped";
 import Challeng from "./challeng";
 import Chasehq from "./chasehq";
+import Cischeat from "./cischeat";
 import Citycon from "./citycon";
 import Cluclu from "./cluclu";
 import Cninja from "./cninja";
@@ -419,6 +421,7 @@ const extractors: { [romName: string]: any } = {
     'battroad': Battroad,
     'bbmanw': Bbmanw,
     'bchopper': Bchopper,
+    'bigrun': Bigrun,
     'blaster': Blaster,
     'bmaster': Bmaster,
     'bombjack': Bombjack,
@@ -436,6 +439,7 @@ const extractors: { [romName: string]: any } = {
     'centiped': Centiped,
     'challeng': Challeng,
     'chasehq': Chasehq,
+    'cischeat': Cischeat,
     'citycon': Citycon,
     'cluclu': Cluclu,
     'cninja': Cninja,

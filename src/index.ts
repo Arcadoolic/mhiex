@@ -9,11 +9,15 @@ export class MameHiExtractor {
     constructor(private dir: string) {}
 
     /**
-     * Return hiscores of a game
+     * Return hiscores of a game; undefined when there is no extractor for it
      * @param romName
      */
     public async get(romName: string): Promise<AbstractExtractor | undefined | void> {
-        return (new extractors[romName]()).init(this.dir)
+        const Extractor = extractors[romName]
+        if (!Extractor) {
+            return undefined
+        }
+        return (new Extractor()).init(this.dir)
     }
 
     /**

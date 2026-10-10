@@ -14,6 +14,7 @@ import Abcop from "./abcop";
 import Aburner from "./aburner";
 import Aburner2 from "./aburner2";
 import Acrobatm from "./acrobatm";
+import Actfancr from "./actfancr";
 import Actionhw from "./actionhw";
 import Ad2083 from "./ad2083";
 import Aerofgt from "./aerofgt";
@@ -64,23 +65,28 @@ import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
 import Bigrun from "./bigrun";
 import Blaster from "./blaster";
+import Bldwolf from "./bldwolf";
 import Bmaster from "./bmaster";
+import Bnj from "./bnj";
 import Bnzabros from "./bnzabros";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
+import Brkthru from "./brkthru";
 import Btime from "./btime";
 import Bubbles from "./bubbles";
 import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
 import Captaven from "./captaven";
 import Captcomm from "./captcomm";
+import Cbuster from "./cbuster";
 import Ccastles from "./ccastles";
 import Cclimber from "./cclimber";
 import Cclimbr2 from "./cclimbr2";
 import Centiped from "./centiped";
 import Challeng from "./challeng";
 import Chasehq from "./chasehq";
+import Chelnov from "./chelnov";
 import Cischeat from "./cischeat";
 import Citycon from "./citycon";
 import Cluclu from "./cluclu";
@@ -96,6 +102,7 @@ import Dacholer from "./dacholer";
 import Dangar from "./dangar";
 import Darius from "./darius";
 import Darkmist from "./darkmist";
+import Darwin from "./darwin";
 import Dbldynj from "./dbldynj";
 import Dbreed from "./dbreed";
 import Dday from "./dday";
@@ -107,6 +114,7 @@ import Ddux from "./ddux";
 import Deadang from "./deadang";
 import Defender from "./defender";
 import Demonwld from "./demonwld";
+import Dietgo from "./dietgo";
 import Digdug from "./digdug";
 import Digdug2 from "./digdug2";
 import Dino from "./dino";
@@ -123,6 +131,7 @@ import Dstlk from "./dstlk";
 import Duckhunt from "./duckhunt";
 import Dynablst from "./dynablst";
 import Dynamski from "./dynamski";
+import Edrandy from "./edrandy";
 import Elevator from "./elevator";
 import Elim2 from "./elim2";
 import Elim4 from "./elim4";
@@ -133,6 +142,7 @@ import Exerion from "./exerion";
 import Fantzone from "./fantzone";
 import Fcombat from "./fcombat";
 import Ffight from "./ffight";
+import Fghthist from "./fghthist";
 import Flicky from "./flicky";
 import Formatz from "./formatz";
 import Frogs from "./frogs";
@@ -202,6 +212,7 @@ import Ldrun4 from "./ldrun4";
 import Legion from "./legion";
 import Lethalth from "./lethalth";
 import Lifefrce from "./lifefrce";
+import Lnc from "./lnc";
 import Loht from "./loht";
 import Lomakai from "./lomakai";
 import Lotlot from "./lotlot";
@@ -232,6 +243,7 @@ import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
 import Mslug3 from "./mslug3";
 import Mslugx from "./mslugx";
+import Mutantf from "./mutantf";
 import Mvsc from "./mvsc";
 import Mwalk from "./mwalk";
 import Mysticri from "./mysticri";
@@ -284,6 +296,7 @@ import Rfjet from "./rfjet";
 import Riskchal from "./riskchal";
 import Rjammer from "./rjammer";
 import Robocop from "./robocop";
+import Robocop2 from "./robocop2";
 import Robotron from "./robotron";
 import Rodland from "./rodland";
 import Route16 from "./route16";
@@ -329,6 +342,7 @@ import Splat from "./splat";
 import Splatter from "./splatter";
 import Spnchout from "./spnchout";
 import Spyhunt from "./spyhunt";
+import Srdarwin from "./srdarwin";
 import Ssf2 from "./ssf2";
 import Ssf2t from "./ssf2t";
 import Ssoldier from "./ssoldier";
@@ -339,6 +353,7 @@ import Starwars from "./starwars";
 import Stdragon from "./stdragon";
 import Stinger from "./stinger";
 import Strider from "./strider";
+import Supbtime from "./supbtime";
 import Superman from "./superman";
 import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
@@ -360,6 +375,7 @@ import Travrusa from "./travrusa";
 import Troangel from "./troangel";
 import Tron from "./tron";
 import Tturf from "./tturf";
+import Tumblep from "./tumblep";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
 import Twocrude from "./twocrude";
@@ -402,6 +418,7 @@ const extractors: { [romName: string]: any } = {
     'aburner': Aburner,
     'aburner2': Aburner2,
     'acrobatm': Acrobatm,
+    'actfancr': Actfancr,
     'actionhw': Actionhw,
     'ad2083': Ad2083,
     'aerofgt': Aerofgt,
@@ -452,23 +469,28 @@ const extractors: { [romName: string]: any } = {
     'bchopper': Bchopper,
     'bigrun': Bigrun,
     'blaster': Blaster,
+    'bldwolf': Bldwolf,
     'bmaster': Bmaster,
+    'bnj': Bnj,
     'bnzabros': Bnzabros,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
+    'brkthru': Brkthru,
     'btime': Btime,
     'bubbles': Bubbles,
     'bublbobl': Bublbobl,
     'bzone': Bzone,
     'captaven': Captaven,
     'captcomm': Captcomm,
+    'cbuster': Cbuster,
     'ccastles': Ccastles,
     'cclimber': Cclimber,
     'cclimbr2': Cclimbr2,
     'centiped': Centiped,
     'challeng': Challeng,
     'chasehq': Chasehq,
+    'chelnov': Chelnov,
     'cischeat': Cischeat,
     'citycon': Citycon,
     'cluclu': Cluclu,
@@ -484,6 +506,7 @@ const extractors: { [romName: string]: any } = {
     'dangar': Dangar,
     'darius': Darius,
     'darkmist': Darkmist,
+    'darwin': Darwin,
     'dbldynj': Dbldynj,
     'dbreed': Dbreed,
     'dday': Dday,
@@ -495,6 +518,7 @@ const extractors: { [romName: string]: any } = {
     'deadang': Deadang,
     'defender': Defender,
     'demonwld': Demonwld,
+    'dietgo': Dietgo,
     'digdug': Digdug,
     'digdug2': Digdug2,
     'dino': Dino,
@@ -511,6 +535,7 @@ const extractors: { [romName: string]: any } = {
     'duckhunt': Duckhunt,
     'dynablst': Dynablst,
     'dynamski': Dynamski,
+    'edrandy': Edrandy,
     'elevator': Elevator,
     'elim2': Elim2,
     'elim4': Elim4,
@@ -521,6 +546,7 @@ const extractors: { [romName: string]: any } = {
     'fantzone': Fantzone,
     'fcombat': Fcombat,
     'ffight': Ffight,
+    'fghthist': Fghthist,
     'flicky': Flicky,
     'formatz': Formatz,
     'frogs': Frogs,
@@ -590,6 +616,7 @@ const extractors: { [romName: string]: any } = {
     'legion': Legion,
     'lethalth': Lethalth,
     'lifefrce': Lifefrce,
+    'lnc': Lnc,
     'loht': Loht,
     'lomakai': Lomakai,
     'lotlot': Lotlot,
@@ -620,6 +647,7 @@ const extractors: { [romName: string]: any } = {
     'mslug2': Mslug2,
     'mslug3': Mslug3,
     'mslugx': Mslugx,
+    'mutantf': Mutantf,
     'mvsc': Mvsc,
     'mwalk': Mwalk,
     'mysticri': Mysticri,
@@ -672,6 +700,7 @@ const extractors: { [romName: string]: any } = {
     'riskchal': Riskchal,
     'rjammer': Rjammer,
     'robocop': Robocop,
+    'robocop2': Robocop2,
     'robotron': Robotron,
     'rodland': Rodland,
     'route16': Route16,
@@ -717,6 +746,7 @@ const extractors: { [romName: string]: any } = {
     'splatter': Splatter,
     'spnchout': Spnchout,
     'spyhunt': Spyhunt,
+    'srdarwin': Srdarwin,
     'ssf2': Ssf2,
     'ssf2t': Ssf2t,
     'ssoldier': Ssoldier,
@@ -727,6 +757,7 @@ const extractors: { [romName: string]: any } = {
     'stdragon': Stdragon,
     'stinger': Stinger,
     'strider': Strider,
+    'supbtime': Supbtime,
     'superman': Superman,
     'superpac': Superpac,
     'suprmrio': Suprmrio,
@@ -748,6 +779,7 @@ const extractors: { [romName: string]: any } = {
     'troangel': Troangel,
     'tron': Tron,
     'tturf': Tturf,
+    'tumblep': Tumblep,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
     'twocrude': Twocrude,

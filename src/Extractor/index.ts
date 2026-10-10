@@ -60,6 +60,7 @@ import Avspirit from "./avspirit";
 import Baddudes from "./baddudes";
 import Bankp from "./bankp";
 import Batman from "./batman";
+import Batsugun from "./batsugun";
 import Battroad from "./battroad";
 import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
@@ -122,6 +123,7 @@ import Dkong from "./dkong";
 import Dkong3 from "./dkong3";
 import Dkongjr from "./dkongjr";
 import Docastle from "./docastle";
+import Dogyuun from "./dogyuun";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
 import Drmario from "./drmario";
@@ -143,6 +145,7 @@ import Fantzone from "./fantzone";
 import Fcombat from "./fcombat";
 import Ffight from "./ffight";
 import Fghthist from "./fghthist";
+import Fireshrk from "./fireshrk";
 import Flicky from "./flicky";
 import Formatz from "./formatz";
 import Frogs from "./frogs";
@@ -158,6 +161,7 @@ import Ghouls from "./ghouls";
 import Gng from "./gng";
 import Gradius from "./gradius";
 import Gravitar from "./gravitar";
+import Grindstm from "./grindstm";
 import Gunforc2 from "./gunforc2";
 import Gunforce from "./gunforce";
 import Gunsmoke from "./gunsmoke";
@@ -165,6 +169,7 @@ import Guzzler from "./guzzler";
 import Gyruss from "./gyruss";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
+import Hellfire from "./hellfire";
 import Hharry from "./hharry";
 import Hook from "./hook";
 import Horekid from "./horekid";
@@ -188,6 +193,7 @@ import Joust from "./joust";
 import Joust2 from "./joust2";
 import Jumpbug from "./jumpbug";
 import Karnov from "./karnov";
+import Kbash from "./kbash";
 import Kchamp from "./kchamp";
 import Kidniki from "./kidniki";
 import Kikcubic from "./kikcubic";
@@ -286,6 +292,7 @@ import Quartet from "./quartet";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
+import Rallybik from "./rallybik";
 import Rallyx from "./rallyx";
 import Rbtapper from "./rbtapper";
 import Rdft from "./rdft";
@@ -359,11 +366,13 @@ import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
 import Tapper from "./tapper";
 import Targ from "./targ";
+import Tekipaki from "./tekipaki";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
 import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
+import Tigerh from "./tigerh";
 import Timeplt from "./timeplt";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
@@ -374,10 +383,14 @@ import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
 import Tron from "./tron";
+import Truxton from "./truxton";
+import Truxton2 from "./truxton2";
 import Tturf from "./tturf";
 import Tumblep from "./tumblep";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
+import Twincobr from "./twincobr";
+import Twinhawk from "./twinhawk";
 import Twocrude from "./twocrude";
 import Uccops from "./uccops";
 import Uniwars from "./uniwars";
@@ -386,6 +399,7 @@ import Vaportra from "./vaportra";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
+import Wardner from "./wardner";
 import Wb3 from "./wb3";
 import Wboy from "./wboy";
 import Willow from "./willow";
@@ -399,6 +413,7 @@ import Xmvsf from "./xmvsf";
 import Yiear from "./yiear";
 import Youjyudn from "./youjyudn";
 import Zaxxon from "./zaxxon";
+import Zerowing from "./zerowing";
 import Zoar from "./zoar";
 
 const extractors: { [romName: string]: any } = {
@@ -464,6 +479,7 @@ const extractors: { [romName: string]: any } = {
     'baddudes': Baddudes,
     'bankp': Bankp,
     'batman': Batman,
+    'batsugun': Batsugun,
     'battroad': Battroad,
     'bbmanw': Bbmanw,
     'bchopper': Bchopper,
@@ -526,6 +542,7 @@ const extractors: { [romName: string]: any } = {
     'dkong3': Dkong3,
     'dkongjr': Dkongjr,
     'docastle': Docastle,
+    'dogyuun': Dogyuun,
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
     'drmario': Drmario,
@@ -547,6 +564,7 @@ const extractors: { [romName: string]: any } = {
     'fcombat': Fcombat,
     'ffight': Ffight,
     'fghthist': Fghthist,
+    'fireshrk': Fireshrk,
     'flicky': Flicky,
     'formatz': Formatz,
     'frogs': Frogs,
@@ -562,6 +580,7 @@ const extractors: { [romName: string]: any } = {
     'gng': Gng,
     'gradius': Gradius,
     'gravitar': Gravitar,
+    'grindstm': Grindstm,
     'gunforc2': Gunforc2,
     'gunforce': Gunforce,
     'gunsmoke': Gunsmoke,
@@ -569,6 +588,7 @@ const extractors: { [romName: string]: any } = {
     'gyruss': Gyruss,
     'hangon': Hangon,
     'hbarrel': Hbarrel,
+    'hellfire': Hellfire,
     'hharry': Hharry,
     'hook': Hook,
     'horekid': Horekid,
@@ -592,6 +612,7 @@ const extractors: { [romName: string]: any } = {
     'joust2': Joust2,
     'jumpbug': Jumpbug,
     'karnov': Karnov,
+    'kbash': Kbash,
     'kchamp': Kchamp,
     'kidniki': Kidniki,
     'kikcubic': Kikcubic,
@@ -690,6 +711,7 @@ const extractors: { [romName: string]: any } = {
     'radarscp': Radarscp,
     'raiden': Raiden,
     'raiden2': Raiden2,
+    'rallybik': Rallybik,
     'rallyx': Rallyx,
     'rbtapper': Rbtapper,
     'rdft': Rdft,
@@ -763,11 +785,13 @@ const extractors: { [romName: string]: any } = {
     'suprmrio': Suprmrio,
     'tapper': Tapper,
     'targ': Targ,
+    'tekipaki': Tekipaki,
     'tempest': Tempest,
     'terracre': Terracre,
     'terraf': Terraf,
     'tetris': Tetris,
     'thepit': Thepit,
+    'tigerh': Tigerh,
     'timeplt': Timeplt,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
@@ -778,10 +802,14 @@ const extractors: { [romName: string]: any } = {
     'travrusa': Travrusa,
     'troangel': Troangel,
     'tron': Tron,
+    'truxton': Truxton,
+    'truxton2': Truxton2,
     'tturf': Tturf,
     'tumblep': Tumblep,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
+    'twincobr': Twincobr,
+    'twinhawk': Twinhawk,
     'twocrude': Twocrude,
     'uccops': Uccops,
     'uniwars': Uniwars,
@@ -790,6 +818,7 @@ const extractors: { [romName: string]: any } = {
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,
+    'wardner': Wardner,
     'wb3': Wb3,
     'wboy': Wboy,
     'willow': Willow,
@@ -803,6 +832,7 @@ const extractors: { [romName: string]: any } = {
     'yiear': Yiear,
     'youjyudn': Youjyudn,
     'zaxxon': Zaxxon,
+    'zerowing': Zerowing,
     'zoar': Zoar,
 }
 

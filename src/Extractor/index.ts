@@ -65,6 +65,7 @@ import Bchopper from "./bchopper";
 import Bigrun from "./bigrun";
 import Blaster from "./blaster";
 import Bmaster from "./bmaster";
+import Bnzabros from "./bnzabros";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
@@ -86,6 +87,7 @@ import Cluclu from "./cluclu";
 import Cninja from "./cninja";
 import Cobracom from "./cobracom";
 import Columns from "./columns";
+import Congo from "./congo";
 import Contra from "./contra";
 import Cop01 from "./cop01";
 import Cosmccop from "./cosmccop";
@@ -101,6 +103,7 @@ import Ddragon from "./ddragon";
 import Ddragon2 from "./ddragon2";
 import Ddsom from "./ddsom";
 import Ddtod from "./ddtod";
+import Ddux from "./ddux";
 import Deadang from "./deadang";
 import Defender from "./defender";
 import Demonwld from "./demonwld";
@@ -124,9 +127,13 @@ import Elevator from "./elevator";
 import Elim2 from "./elim2";
 import Elim4 from "./elim4";
 import Empcity from "./empcity";
+import Enduror from "./enduror";
+import Eswat from "./eswat";
 import Exerion from "./exerion";
+import Fantzone from "./fantzone";
 import Fcombat from "./fcombat";
 import Ffight from "./ffight";
+import Flicky from "./flicky";
 import Formatz from "./formatz";
 import Frogs from "./frogs";
 import Gaiden from "./gaiden";
@@ -136,6 +143,7 @@ import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
 import Galivan from "./galivan";
 import Gemini from "./gemini";
+import Gground from "./gground";
 import Ghouls from "./ghouls";
 import Gng from "./gng";
 import Gradius from "./gradius";
@@ -236,6 +244,7 @@ import Nrallyx from "./nrallyx";
 import Nspirit from "./nspirit";
 import Nwarr from "./nwarr";
 import Olibochu from "./olibochu";
+import Opaopa from "./opaopa";
 import Opwolf from "./opwolf";
 import Outrun from "./outrun";
 import Outzone from "./outzone";
@@ -257,8 +266,11 @@ import Poundfor from "./poundfor";
 import Psychic5 from "./psychic5";
 import Puckman from "./puckman";
 import Punchout from "./punchout";
+import Puyo from "./puyo";
+import Puyopuy2 from "./puyopuy2";
 import Qbert from "./qbert";
 import Qbertqub from "./qbertqub";
+import Quartet from "./quartet";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
@@ -347,15 +359,18 @@ import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
 import Tron from "./tron";
+import Tturf from "./tturf";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
 import Twocrude from "./twocrude";
 import Uccops from "./uccops";
 import Uniwars from "./uniwars";
+import Upndown from "./upndown";
 import Vaportra from "./vaportra";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
+import Wb3 from "./wb3";
 import Wboy from "./wboy";
 import Willow from "./willow";
 import Wiping from "./wiping";
@@ -367,6 +382,7 @@ import Xmultipl from "./xmultipl";
 import Xmvsf from "./xmvsf";
 import Yiear from "./yiear";
 import Youjyudn from "./youjyudn";
+import Zaxxon from "./zaxxon";
 import Zoar from "./zoar";
 
 const extractors: { [romName: string]: any } = {
@@ -437,6 +453,7 @@ const extractors: { [romName: string]: any } = {
     'bigrun': Bigrun,
     'blaster': Blaster,
     'bmaster': Bmaster,
+    'bnzabros': Bnzabros,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
@@ -458,6 +475,7 @@ const extractors: { [romName: string]: any } = {
     'cninja': Cninja,
     'cobracom': Cobracom,
     'columns': Columns,
+    'congo': Congo,
     'contra': Contra,
     'cop01': Cop01,
     'cosmccop': Cosmccop,
@@ -473,6 +491,7 @@ const extractors: { [romName: string]: any } = {
     'ddragon2': Ddragon2,
     'ddsom': Ddsom,
     'ddtod': Ddtod,
+    'ddux': Ddux,
     'deadang': Deadang,
     'defender': Defender,
     'demonwld': Demonwld,
@@ -496,9 +515,13 @@ const extractors: { [romName: string]: any } = {
     'elim2': Elim2,
     'elim4': Elim4,
     'empcity': Empcity,
+    'enduror': Enduror,
+    'eswat': Eswat,
     'exerion': Exerion,
+    'fantzone': Fantzone,
     'fcombat': Fcombat,
     'ffight': Ffight,
+    'flicky': Flicky,
     'formatz': Formatz,
     'frogs': Frogs,
     'gaiden': Gaiden,
@@ -508,6 +531,7 @@ const extractors: { [romName: string]: any } = {
     'galaxian': Galaxian,
     'galivan': Galivan,
     'gemini': Gemini,
+    'gground': Gground,
     'ghouls': Ghouls,
     'gng': Gng,
     'gradius': Gradius,
@@ -608,6 +632,7 @@ const extractors: { [romName: string]: any } = {
     'nspirit': Nspirit,
     'nwarr': Nwarr,
     'olibochu': Olibochu,
+    'opaopa': Opaopa,
     'opwolf': Opwolf,
     'outrun': Outrun,
     'outzone': Outzone,
@@ -629,8 +654,11 @@ const extractors: { [romName: string]: any } = {
     'psychic5': Psychic5,
     'puckman': Puckman,
     'punchout': Punchout,
+    'puyo': Puyo,
+    'puyopuy2': Puyopuy2,
     'qbert': Qbert,
     'qbertqub': Qbertqub,
+    'quartet': Quartet,
     'radarscp': Radarscp,
     'raiden': Raiden,
     'raiden2': Raiden2,
@@ -719,15 +747,18 @@ const extractors: { [romName: string]: any } = {
     'travrusa': Travrusa,
     'troangel': Troangel,
     'tron': Tron,
+    'tturf': Tturf,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
     'twocrude': Twocrude,
     'uccops': Uccops,
     'uniwars': Uniwars,
+    'upndown': Upndown,
     'vaportra': Vaportra,
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,
+    'wb3': Wb3,
     'wboy': Wboy,
     'willow': Willow,
     'wiping': Wiping,
@@ -739,6 +770,7 @@ const extractors: { [romName: string]: any } = {
     'xmvsf': Xmvsf,
     'yiear': Yiear,
     'youjyudn': Youjyudn,
+    'zaxxon': Zaxxon,
     'zoar': Zoar,
 }
 

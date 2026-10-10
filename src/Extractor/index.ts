@@ -96,6 +96,7 @@ import Darius from "./darius";
 import Darkmist from "./darkmist";
 import Dbldynj from "./dbldynj";
 import Dbreed from "./dbreed";
+import Dday from "./dday";
 import Ddragon from "./ddragon";
 import Ddragon2 from "./ddragon2";
 import Ddsom from "./ddsom";
@@ -214,6 +215,7 @@ import Momoko from "./momoko";
 import Mooncrst from "./mooncrst";
 import Moonqsr from "./moonqsr";
 import Motos from "./motos";
+import Mpatrol from "./mpatrol";
 import Mplanets from "./mplanets";
 import Msh from "./msh";
 import Mshuttle from "./mshuttle";
@@ -230,6 +232,7 @@ import Naughtyb from "./naughtyb";
 import Nbbatman from "./nbbatman";
 import Ninjemak from "./ninjemak";
 import Nitd from "./nitd";
+import Nrallyx from "./nrallyx";
 import Nspirit from "./nspirit";
 import Nwarr from "./nwarr";
 import Olibochu from "./olibochu";
@@ -243,21 +246,28 @@ import Pang from "./pang";
 import Paperboy from "./paperboy";
 import Pbaction from "./pbaction";
 import Pengo from "./pengo";
+import Phoenix from "./phoenix";
 import Pinbo from "./pinbo";
+import Pleiadce from "./pleiadce";
+import Pleiads from "./pleiads";
 import Pooyan from "./pooyan";
 import Popeye from "./popeye";
+import Popflame from "./popflame";
 import Poundfor from "./poundfor";
 import Psychic5 from "./psychic5";
+import Puckman from "./puckman";
 import Punchout from "./punchout";
 import Qbert from "./qbert";
 import Qbertqub from "./qbertqub";
 import Radarscp from "./radarscp";
 import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
+import Rallyx from "./rallyx";
 import Rbtapper from "./rbtapper";
 import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
 import Reactor from "./reactor";
+import Redalert from "./redalert";
 import Rfjet from "./rfjet";
 import Riskchal from "./riskchal";
 import Rjammer from "./rjammer";
@@ -297,6 +307,7 @@ import Smashtv from "./smashtv";
 import Snowbro2 from "./snowbro2";
 import Snowbros from "./snowbros";
 import Solomon from "./solomon";
+import Spacefev from "./spacefev";
 import Spang from "./spang";
 import Spelunk2 from "./spelunk2";
 import Spelunkr from "./spelunkr";
@@ -320,6 +331,7 @@ import Superman from "./superman";
 import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
 import Tapper from "./tapper";
+import Targ from "./targ";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
 import Terraf from "./terraf";
@@ -339,6 +351,7 @@ import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
 import Twocrude from "./twocrude";
 import Uccops from "./uccops";
+import Uniwars from "./uniwars";
 import Vaportra from "./vaportra";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
@@ -455,6 +468,7 @@ const extractors: { [romName: string]: any } = {
     'darkmist': Darkmist,
     'dbldynj': Dbldynj,
     'dbreed': Dbreed,
+    'dday': Dday,
     'ddragon': Ddragon,
     'ddragon2': Ddragon2,
     'ddsom': Ddsom,
@@ -573,6 +587,7 @@ const extractors: { [romName: string]: any } = {
     'mooncrst': Mooncrst,
     'moonqsr': Moonqsr,
     'motos': Motos,
+    'mpatrol': Mpatrol,
     'mplanets': Mplanets,
     'msh': Msh,
     'mshuttle': Mshuttle,
@@ -589,6 +604,7 @@ const extractors: { [romName: string]: any } = {
     'nbbatman': Nbbatman,
     'ninjemak': Ninjemak,
     'nitd': Nitd,
+    'nrallyx': Nrallyx,
     'nspirit': Nspirit,
     'nwarr': Nwarr,
     'olibochu': Olibochu,
@@ -602,21 +618,28 @@ const extractors: { [romName: string]: any } = {
     'paperboy': Paperboy,
     'pbaction': Pbaction,
     'pengo': Pengo,
+    'phoenix': Phoenix,
     'pinbo': Pinbo,
+    'pleiadce': Pleiadce,
+    'pleiads': Pleiads,
     'pooyan': Pooyan,
     'popeye': Popeye,
+    'popflame': Popflame,
     'poundfor': Poundfor,
     'psychic5': Psychic5,
+    'puckman': Puckman,
     'punchout': Punchout,
     'qbert': Qbert,
     'qbertqub': Qbertqub,
     'radarscp': Radarscp,
     'raiden': Raiden,
     'raiden2': Raiden2,
+    'rallyx': Rallyx,
     'rbtapper': Rbtapper,
     'rdft': Rdft,
     'rdft2': Rdft2,
     'reactor': Reactor,
+    'redalert': Redalert,
     'rfjet': Rfjet,
     'riskchal': Riskchal,
     'rjammer': Rjammer,
@@ -656,6 +679,7 @@ const extractors: { [romName: string]: any } = {
     'snowbro2': Snowbro2,
     'snowbros': Snowbros,
     'solomon': Solomon,
+    'spacefev': Spacefev,
     'spang': Spang,
     'spelunk2': Spelunk2,
     'spelunkr': Spelunkr,
@@ -679,6 +703,7 @@ const extractors: { [romName: string]: any } = {
     'superpac': Superpac,
     'suprmrio': Suprmrio,
     'tapper': Tapper,
+    'targ': Targ,
     'tempest': Tempest,
     'terracre': Terracre,
     'terraf': Terraf,
@@ -698,6 +723,7 @@ const extractors: { [romName: string]: any } = {
     'twcup90': Twcup90,
     'twocrude': Twocrude,
     'uccops': Uccops,
+    'uniwars': Uniwars,
     'vaportra': Vaportra,
     'vf': Vf,
     'vigilant': Vigilant,

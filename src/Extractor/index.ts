@@ -107,6 +107,8 @@ import Darwin from "./darwin";
 import Dbldynj from "./dbldynj";
 import Dbreed from "./dbreed";
 import Dday from "./dday";
+import Ddonpach from "./ddonpach";
+import Ddp3 from "./ddp3";
 import Ddragon from "./ddragon";
 import Ddragon2 from "./ddragon2";
 import Ddsom from "./ddsom";
@@ -139,6 +141,7 @@ import Elim2 from "./elim2";
 import Elim4 from "./elim4";
 import Empcity from "./empcity";
 import Enduror from "./enduror";
+import Esprade from "./esprade";
 import Eswat from "./eswat";
 import Exerion from "./exerion";
 import Fantzone from "./fantzone";
@@ -256,6 +259,7 @@ import Mysticri from "./mysticri";
 import Narc from "./narc";
 import Naughtyb from "./naughtyb";
 import Nbbatman from "./nbbatman";
+import Ninjaw from "./ninjaw";
 import Ninjemak from "./ninjemak";
 import Nitd from "./nitd";
 import Nrallyx from "./nrallyx";
@@ -294,6 +298,7 @@ import Raiden from "./raiden";
 import Raiden2 from "./raiden2";
 import Rallybik from "./rallybik";
 import Rallyx from "./rallyx";
+import Rastan from "./rastan";
 import Rbtapper from "./rbtapper";
 import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
@@ -376,6 +381,7 @@ import Tigerh from "./tigerh";
 import Timeplt from "./timeplt";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
+import Tnzs from "./tnzs";
 import Todruaga from "./todruaga";
 import Toki from "./toki";
 import Toutrun from "./toutrun";
@@ -526,6 +532,8 @@ const extractors: { [romName: string]: any } = {
     'dbldynj': Dbldynj,
     'dbreed': Dbreed,
     'dday': Dday,
+    'ddonpach': Ddonpach,
+    'ddp3': Ddp3,
     'ddragon': Ddragon,
     'ddragon2': Ddragon2,
     'ddsom': Ddsom,
@@ -558,6 +566,7 @@ const extractors: { [romName: string]: any } = {
     'elim4': Elim4,
     'empcity': Empcity,
     'enduror': Enduror,
+    'esprade': Esprade,
     'eswat': Eswat,
     'exerion': Exerion,
     'fantzone': Fantzone,
@@ -675,6 +684,7 @@ const extractors: { [romName: string]: any } = {
     'narc': Narc,
     'naughtyb': Naughtyb,
     'nbbatman': Nbbatman,
+    'ninjaw': Ninjaw,
     'ninjemak': Ninjemak,
     'nitd': Nitd,
     'nrallyx': Nrallyx,
@@ -713,6 +723,7 @@ const extractors: { [romName: string]: any } = {
     'raiden2': Raiden2,
     'rallybik': Rallybik,
     'rallyx': Rallyx,
+    'rastan': Rastan,
     'rbtapper': Rbtapper,
     'rdft': Rdft,
     'rdft2': Rdft2,
@@ -795,6 +806,7 @@ const extractors: { [romName: string]: any } = {
     'timeplt': Timeplt,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
+    'tnzs': Tnzs,
     'todruaga': Todruaga,
     'toki': Toki,
     'toutrun': Toutrun,

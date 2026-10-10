@@ -188,6 +188,7 @@ import Joust from "./joust";
 import Joust2 from "./joust2";
 import Jumpbug from "./jumpbug";
 import Karnov from "./karnov";
+import Kbash from "./kbash";
 import Kchamp from "./kchamp";
 import Kidniki from "./kidniki";
 import Kikcubic from "./kikcubic";
@@ -359,11 +360,13 @@ import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
 import Tapper from "./tapper";
 import Targ from "./targ";
+import Tekipaki from "./tekipaki";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
 import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
+import Tigerh from "./tigerh";
 import Timeplt from "./timeplt";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
@@ -378,6 +381,7 @@ import Tturf from "./tturf";
 import Tumblep from "./tumblep";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
+import Twinhawk from "./twinhawk";
 import Twocrude from "./twocrude";
 import Uccops from "./uccops";
 import Uniwars from "./uniwars";
@@ -386,6 +390,7 @@ import Vaportra from "./vaportra";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
+import Wardner from "./wardner";
 import Wb3 from "./wb3";
 import Wboy from "./wboy";
 import Willow from "./willow";
@@ -592,6 +597,7 @@ const extractors: { [romName: string]: any } = {
     'joust2': Joust2,
     'jumpbug': Jumpbug,
     'karnov': Karnov,
+    'kbash': Kbash,
     'kchamp': Kchamp,
     'kidniki': Kidniki,
     'kikcubic': Kikcubic,
@@ -763,11 +769,13 @@ const extractors: { [romName: string]: any } = {
     'suprmrio': Suprmrio,
     'tapper': Tapper,
     'targ': Targ,
+    'tekipaki': Tekipaki,
     'tempest': Tempest,
     'terracre': Terracre,
     'terraf': Terraf,
     'tetris': Tetris,
     'thepit': Thepit,
+    'tigerh': Tigerh,
     'timeplt': Timeplt,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
@@ -782,6 +790,7 @@ const extractors: { [romName: string]: any } = {
     'tumblep': Tumblep,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
+    'twinhawk': Twinhawk,
     'twocrude': Twocrude,
     'uccops': Uccops,
     'uniwars': Uniwars,
@@ -790,6 +799,7 @@ const extractors: { [romName: string]: any } = {
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,
+    'wardner': Wardner,
     'wb3': Wb3,
     'wboy': Wboy,
     'willow': Willow,

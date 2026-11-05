@@ -18,7 +18,7 @@ extract(): this {
         for (let i = 0; i < 9; i++) {
             this.scores.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 2).byteSwap(2).buffer.readUInt16BE(),
+                score: this.hi!.slice(currentByte, 4).buffer.readUInt32LE(),
                 name: this.hi!.slice(currentByte + 6, 3).toString(this.charset)
             });
             currentByte += 10;
@@ -28,7 +28,7 @@ extract(): this {
         for (let i = 0; i < 9; i++) {
             this.output.extras['dual'].push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 2).byteSwap(2).buffer.readUInt16BE(),
+                score: this.hi!.slice(currentByte, 4).buffer.readUInt32LE(),
                 name: this.hi!.slice(currentByte + 6, 3).toString(this.charset)
             });
             currentByte += 10;

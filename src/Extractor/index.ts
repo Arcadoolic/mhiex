@@ -184,9 +184,11 @@ import Gravitar from "./gravitar";
 import Grindstm from "./grindstm";
 import Gunforc2 from "./gunforc2";
 import Gunforce from "./gunforce";
+import Gunnail from "./gunnail";
 import Gunsmoke from "./gunsmoke";
 import Guzzler from "./guzzler";
 import Gyruss from "./gyruss";
+import Hachamfa from "./hachamfa";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
 import Hcastle from "./hcastle";
@@ -411,6 +413,8 @@ import Suprmrio from "./suprmrio";
 import Tacscan from "./tacscan";
 import Tapper from "./tapper";
 import Targ from "./targ";
+import Tdragon from "./tdragon";
+import Tdragon2 from "./tdragon2";
 import Tekipaki from "./tekipaki";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
@@ -658,9 +662,11 @@ const extractors: { [romName: string]: any } = {
     'grindstm': Grindstm,
     'gunforc2': Gunforc2,
     'gunforce': Gunforce,
+    'gunnail': Gunnail,
     'gunsmoke': Gunsmoke,
     'guzzler': Guzzler,
     'gyruss': Gyruss,
+    'hachamfa': Hachamfa,
     'hangon': Hangon,
     'hbarrel': Hbarrel,
     'hcastle': Hcastle,
@@ -885,6 +891,8 @@ const extractors: { [romName: string]: any } = {
     'tacscan': Tacscan,
     'tapper': Tapper,
     'targ': Targ,
+    'tdragon': Tdragon,
+    'tdragon2': Tdragon2,
     'tekipaki': Tekipaki,
     'tempest': Tempest,
     'terracre': Terracre,

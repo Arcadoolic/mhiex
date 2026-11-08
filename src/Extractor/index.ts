@@ -90,6 +90,7 @@ import Cclimber from "./cclimber";
 import Cclimbr2 from "./cclimbr2";
 import Centiped from "./centiped";
 import Challeng from "./challeng";
+import Charlien from "./charlien";
 import Chasehq from "./chasehq";
 import Chelnov from "./chelnov";
 import Chinagat from "./chinagat";
@@ -113,6 +114,7 @@ import Darius from "./darius";
 import Darkmist from "./darkmist";
 import Darwin from "./darwin";
 import Dbldynj from "./dbldynj";
+import Dblewing from "./dblewing";
 import Dbreed from "./dbreed";
 import Dday from "./dday";
 import Ddonpach from "./ddonpach";
@@ -161,6 +163,7 @@ import Fireshrk from "./fireshrk";
 import Flicky from "./flicky";
 import Formatz from "./formatz";
 import Frogs from "./frogs";
+import Funkyjet from "./funkyjet";
 import Gaiden from "./gaiden";
 import Galaga from "./galaga";
 import Galaga88 from "./galaga88";
@@ -206,6 +209,7 @@ import Jackal from "./jackal";
 import Joust from "./joust";
 import Joust2 from "./joust2";
 import Jumpbug from "./jumpbug";
+import Karatour from "./karatour";
 import Karnov from "./karnov";
 import Kbash from "./kbash";
 import Kchamp from "./kchamp";
@@ -258,6 +262,7 @@ import Momoko from "./momoko";
 import Mooncrst from "./mooncrst";
 import Moonqsr from "./moonqsr";
 import Motos from "./motos";
+import Mpang from "./mpang";
 import Mpatrol from "./mpatrol";
 import Mplanets from "./mplanets";
 import Msh from "./msh";
@@ -286,12 +291,14 @@ import Nwarr from "./nwarr";
 import Olibochu from "./olibochu";
 import Opaopa from "./opaopa";
 import Opwolf from "./opwolf";
+import Osman from "./osman";
 import Outrun from "./outrun";
 import Outzone from "./outzone";
 import P47 from "./p47";
 import Pacland from "./pacland";
 import Pacmania from "./pacmania";
 import Pang from "./pang";
+import Pang3 from "./pang3";
 import Paperboy from "./paperboy";
 import Pbaction from "./pbaction";
 import Pengo from "./pengo";
@@ -544,6 +551,7 @@ const extractors: { [romName: string]: any } = {
     'cclimbr2': Cclimbr2,
     'centiped': Centiped,
     'challeng': Challeng,
+    'charlien': Charlien,
     'chasehq': Chasehq,
     'chelnov': Chelnov,
     'chinagat': Chinagat,
@@ -567,6 +575,7 @@ const extractors: { [romName: string]: any } = {
     'darkmist': Darkmist,
     'darwin': Darwin,
     'dbldynj': Dbldynj,
+    'dblewing': Dblewing,
     'dbreed': Dbreed,
     'dday': Dday,
     'ddonpach': Ddonpach,
@@ -615,6 +624,7 @@ const extractors: { [romName: string]: any } = {
     'flicky': Flicky,
     'formatz': Formatz,
     'frogs': Frogs,
+    'funkyjet': Funkyjet,
     'gaiden': Gaiden,
     'galaga': Galaga,
     'galaga88': Galaga88,
@@ -660,6 +670,7 @@ const extractors: { [romName: string]: any } = {
     'joust': Joust,
     'joust2': Joust2,
     'jumpbug': Jumpbug,
+    'karatour': Karatour,
     'karnov': Karnov,
     'kbash': Kbash,
     'kchamp': Kchamp,
@@ -712,6 +723,7 @@ const extractors: { [romName: string]: any } = {
     'mooncrst': Mooncrst,
     'moonqsr': Moonqsr,
     'motos': Motos,
+    'mpang': Mpang,
     'mpatrol': Mpatrol,
     'mplanets': Mplanets,
     'msh': Msh,
@@ -740,12 +752,14 @@ const extractors: { [romName: string]: any } = {
     'olibochu': Olibochu,
     'opaopa': Opaopa,
     'opwolf': Opwolf,
+    'osman': Osman,
     'outrun': Outrun,
     'outzone': Outzone,
     'p47': P47,
     'pacland': Pacland,
     'pacmania': Pacmania,
     'pang': Pang,
+    'pang3': Pang3,
     'paperboy': Paperboy,
     'pbaction': Pbaction,
     'pengo': Pengo,

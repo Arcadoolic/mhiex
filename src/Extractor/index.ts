@@ -82,6 +82,7 @@ import Brkthru from "./brkthru";
 import Btime from "./btime";
 import Bubbles from "./bubbles";
 import Bublbobl from "./bublbobl";
+import Bwidow from "./bwidow";
 import Bzone from "./bzone";
 import Cabal from "./cabal";
 import Captaven from "./captaven";
@@ -269,6 +270,7 @@ import Matmania from "./matmania";
 import Mazinger from "./mazinger";
 import Mercs from "./mercs";
 import Metrocrs from "./metrocrs";
+import Mhavoc from "./mhavoc";
 import Midres from "./midres";
 import Mightguy from "./mightguy";
 import Milliped from "./milliped";
@@ -397,6 +399,7 @@ import Smashtv from "./smashtv";
 import Snowbro2 from "./snowbro2";
 import Snowbros from "./snowbros";
 import Solomon from "./solomon";
+import Spacduel from "./spacduel";
 import Spacefev from "./spacefev";
 import Spang from "./spang";
 import Spelunk2 from "./spelunk2";
@@ -575,6 +578,7 @@ const extractors: { [romName: string]: any } = {
     'btime': Btime,
     'bubbles': Bubbles,
     'bublbobl': Bublbobl,
+    'bwidow': Bwidow,
     'bzone': Bzone,
     'cabal': Cabal,
     'captaven': Captaven,
@@ -762,6 +766,7 @@ const extractors: { [romName: string]: any } = {
     'mazinger': Mazinger,
     'mercs': Mercs,
     'metrocrs': Metrocrs,
+    'mhavoc': Mhavoc,
     'midres': Midres,
     'mightguy': Mightguy,
     'milliped': Milliped,
@@ -890,6 +895,7 @@ const extractors: { [romName: string]: any } = {
     'snowbro2': Snowbro2,
     'snowbros': Snowbros,
     'solomon': Solomon,
+    'spacduel': Spacduel,
     'spacefev': Spacefev,
     'spang': Spang,
     'spelunk2': Spelunk2,

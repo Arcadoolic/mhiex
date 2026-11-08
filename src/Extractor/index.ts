@@ -70,6 +70,7 @@ import Bionicc from "./bionicc";
 import Blaster from "./blaster";
 import Bldwolf from "./bldwolf";
 import Blockout3 from "./blockout3";
+import Bloodbro from "./bloodbro";
 import Bmaster from "./bmaster";
 import Bnj from "./bnj";
 import Bnzabros from "./bnzabros";
@@ -82,6 +83,7 @@ import Btime from "./btime";
 import Bubbles from "./bubbles";
 import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
+import Cabal from "./cabal";
 import Captaven from "./captaven";
 import Captcomm from "./captcomm";
 import Carnival from "./carnival";
@@ -193,6 +195,7 @@ import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
 import Hcastle from "./hcastle";
 import Headon2 from "./headon2";
+import Heatbrl from "./heatbrl";
 import Hellfire from "./hellfire";
 import Hharry from "./hharry";
 import Hook from "./hook";
@@ -242,6 +245,7 @@ import Ldrun2 from "./ldrun2";
 import Ldrun3 from "./ldrun3";
 import Ldrun4 from "./ldrun4";
 import Legion from "./legion";
+import Legionna from "./legionna";
 import Lethalth from "./lethalth";
 import Lifefrce from "./lifefrce";
 import Lnc from "./lnc";
@@ -548,6 +552,7 @@ const extractors: { [romName: string]: any } = {
     'blaster': Blaster,
     'bldwolf': Bldwolf,
     'blockout3': Blockout3,
+    'bloodbro': Bloodbro,
     'bmaster': Bmaster,
     'bnj': Bnj,
     'bnzabros': Bnzabros,
@@ -560,6 +565,7 @@ const extractors: { [romName: string]: any } = {
     'bubbles': Bubbles,
     'bublbobl': Bublbobl,
     'bzone': Bzone,
+    'cabal': Cabal,
     'captaven': Captaven,
     'captcomm': Captcomm,
     'carnival': Carnival,
@@ -671,6 +677,7 @@ const extractors: { [romName: string]: any } = {
     'hbarrel': Hbarrel,
     'hcastle': Hcastle,
     'headon2': Headon2,
+    'heatbrl': Heatbrl,
     'hellfire': Hellfire,
     'hharry': Hharry,
     'hook': Hook,
@@ -720,6 +727,7 @@ const extractors: { [romName: string]: any } = {
     'ldrun3': Ldrun3,
     'ldrun4': Ldrun4,
     'legion': Legion,
+    'legionna': Legionna,
     'lethalth': Lethalth,
     'lifefrce': Lifefrce,
     'lnc': Lnc,

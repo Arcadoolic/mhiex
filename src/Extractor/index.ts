@@ -139,6 +139,7 @@ import Dogyuun from "./dogyuun";
 import Dommy from "./dommy";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
+import Drgnbstr from "./drgnbstr";
 import Drmario from "./drmario";
 import Dsoccr94 from "./dsoccr94";
 import Dspirit from "./dspirit";
@@ -155,6 +156,7 @@ import Enduror from "./enduror";
 import Esprade from "./esprade";
 import Eswat from "./eswat";
 import Exerion from "./exerion";
+import Exvania from "./exvania";
 import Fantzone from "./fantzone";
 import Fcombat from "./fcombat";
 import Ffight from "./ffight";
@@ -170,6 +172,7 @@ import Galaga88 from "./galaga88";
 import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
 import Galivan from "./galivan";
+import Gaplus from "./gaplus";
 import Gberet from "./gberet";
 import Gemini from "./gemini";
 import Gground from "./gground";
@@ -250,6 +253,7 @@ import Mario from "./mario";
 import Matmania from "./matmania";
 import Mazinger from "./mazinger";
 import Mercs from "./mercs";
+import Metrocrs from "./metrocrs";
 import Midres from "./midres";
 import Mightguy from "./mightguy";
 import Milliped from "./milliped";
@@ -272,6 +276,7 @@ import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
 import Mslug3 from "./mslug3";
 import Mslugx from "./mslugx";
+import Mspacman from "./mspacman";
 import Msword from "./msword";
 import Mtwins from "./mtwins";
 import Mutantf from "./mutantf";
@@ -291,6 +296,7 @@ import Nwarr from "./nwarr";
 import Olibochu from "./olibochu";
 import Opaopa from "./opaopa";
 import Opwolf from "./opwolf";
+import Ordyne from "./ordyne";
 import Osman from "./osman";
 import Outrun from "./outrun";
 import Outzone from "./outzone";
@@ -368,6 +374,7 @@ import Sidepckt from "./sidepckt";
 import Silkworm from "./silkworm";
 import Simpsons from "./simpsons";
 import Sinistar from "./sinistar";
+import Skykid from "./skykid";
 import Slammast from "./slammast";
 import Slyspy from "./slyspy";
 import Smashtv from "./smashtv";
@@ -417,6 +424,7 @@ import Tnzs from "./tnzs";
 import Todruaga from "./todruaga";
 import Toki from "./toki";
 import Toutrun from "./toutrun";
+import Toypop from "./toypop";
 import Trackfld from "./trackfld";
 import Travrusa from "./travrusa";
 import Troangel from "./troangel";
@@ -600,6 +608,7 @@ const extractors: { [romName: string]: any } = {
     'dommy': Dommy,
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
+    'drgnbstr': Drgnbstr,
     'drmario': Drmario,
     'dsoccr94': Dsoccr94,
     'dspirit': Dspirit,
@@ -616,6 +625,7 @@ const extractors: { [romName: string]: any } = {
     'esprade': Esprade,
     'eswat': Eswat,
     'exerion': Exerion,
+    'exvania': Exvania,
     'fantzone': Fantzone,
     'fcombat': Fcombat,
     'ffight': Ffight,
@@ -631,6 +641,7 @@ const extractors: { [romName: string]: any } = {
     'galagamk': Galagamk,
     'galaxian': Galaxian,
     'galivan': Galivan,
+    'gaplus': Gaplus,
     'gberet': Gberet,
     'gemini': Gemini,
     'gground': Gground,
@@ -711,6 +722,7 @@ const extractors: { [romName: string]: any } = {
     'matmania': Matmania,
     'mazinger': Mazinger,
     'mercs': Mercs,
+    'metrocrs': Metrocrs,
     'midres': Midres,
     'mightguy': Mightguy,
     'milliped': Milliped,
@@ -733,6 +745,7 @@ const extractors: { [romName: string]: any } = {
     'mslug2': Mslug2,
     'mslug3': Mslug3,
     'mslugx': Mslugx,
+    'mspacman': Mspacman,
     'msword': Msword,
     'mtwins': Mtwins,
     'mutantf': Mutantf,
@@ -752,6 +765,7 @@ const extractors: { [romName: string]: any } = {
     'olibochu': Olibochu,
     'opaopa': Opaopa,
     'opwolf': Opwolf,
+    'ordyne': Ordyne,
     'osman': Osman,
     'outrun': Outrun,
     'outzone': Outzone,
@@ -829,6 +843,7 @@ const extractors: { [romName: string]: any } = {
     'silkworm': Silkworm,
     'simpsons': Simpsons,
     'sinistar': Sinistar,
+    'skykid': Skykid,
     'slammast': Slammast,
     'slyspy': Slyspy,
     'smashtv': Smashtv,
@@ -878,6 +893,7 @@ const extractors: { [romName: string]: any } = {
     'todruaga': Todruaga,
     'toki': Toki,
     'toutrun': Toutrun,
+    'toypop': Toypop,
     'trackfld': Trackfld,
     'travrusa': Travrusa,
     'troangel': Troangel,

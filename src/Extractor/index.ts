@@ -97,6 +97,7 @@ import Charlien from "./charlien";
 import Chasehq from "./chasehq";
 import Chelnov from "./chelnov";
 import Chinagat from "./chinagat";
+import Circus from "./circus";
 import Circusc from "./circusc";
 import Cischeat from "./cischeat";
 import Citycon from "./citycon";
@@ -181,6 +182,7 @@ import Gemini from "./gemini";
 import Gground from "./gground";
 import Ghouls from "./ghouls";
 import Gng from "./gng";
+import Gorf from "./gorf";
 import Gradius from "./gradius";
 import Gravitar from "./gravitar";
 import Grindstm from "./grindstm";
@@ -240,6 +242,7 @@ import Kof99 from "./kof99";
 import Kozure from "./kozure";
 import Krull from "./krull";
 import Kungfum from "./kungfum";
+import Lazarian from "./lazarian";
 import Ldrun from "./ldrun";
 import Ldrun2 from "./ldrun2";
 import Ldrun3 from "./ldrun3";
@@ -286,6 +289,7 @@ import Mslug3 from "./mslug3";
 import Mslugx from "./mslugx";
 import Mspacman from "./mspacman";
 import Msword from "./msword";
+import Mtrap from "./mtrap";
 import Mtwins from "./mtwins";
 import Mutantf from "./mutantf";
 import Mvsc from "./mvsc";
@@ -419,6 +423,7 @@ import Tapper from "./tapper";
 import Targ from "./targ";
 import Tdragon from "./tdragon";
 import Tdragon2 from "./tdragon2";
+import Tehkanwc from "./tehkanwc";
 import Tekipaki from "./tekipaki";
 import Tempest from "./tempest";
 import Terracre from "./terracre";
@@ -457,6 +462,7 @@ import Upndown from "./upndown";
 import Vaportra from "./vaportra";
 import Varth from "./varth";
 import Vendetta from "./vendetta";
+import Venture from "./venture";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
@@ -579,6 +585,7 @@ const extractors: { [romName: string]: any } = {
     'chasehq': Chasehq,
     'chelnov': Chelnov,
     'chinagat': Chinagat,
+    'circus': Circus,
     'circusc': Circusc,
     'cischeat': Cischeat,
     'citycon': Citycon,
@@ -663,6 +670,7 @@ const extractors: { [romName: string]: any } = {
     'gground': Gground,
     'ghouls': Ghouls,
     'gng': Gng,
+    'gorf': Gorf,
     'gradius': Gradius,
     'gravitar': Gravitar,
     'grindstm': Grindstm,
@@ -722,6 +730,7 @@ const extractors: { [romName: string]: any } = {
     'kozure': Kozure,
     'krull': Krull,
     'kungfum': Kungfum,
+    'lazarian': Lazarian,
     'ldrun': Ldrun,
     'ldrun2': Ldrun2,
     'ldrun3': Ldrun3,
@@ -768,6 +777,7 @@ const extractors: { [romName: string]: any } = {
     'mslugx': Mslugx,
     'mspacman': Mspacman,
     'msword': Msword,
+    'mtrap': Mtrap,
     'mtwins': Mtwins,
     'mutantf': Mutantf,
     'mvsc': Mvsc,
@@ -901,6 +911,7 @@ const extractors: { [romName: string]: any } = {
     'targ': Targ,
     'tdragon': Tdragon,
     'tdragon2': Tdragon2,
+    'tehkanwc': Tehkanwc,
     'tekipaki': Tekipaki,
     'tempest': Tempest,
     'terracre': Terracre,
@@ -939,6 +950,7 @@ const extractors: { [romName: string]: any } = {
     'vaportra': Vaportra,
     'varth': Varth,
     'vendetta': Vendetta,
+    'venture': Venture,
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,

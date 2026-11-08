@@ -93,6 +93,7 @@ import Challeng from "./challeng";
 import Chasehq from "./chasehq";
 import Chelnov from "./chelnov";
 import Chinagat from "./chinagat";
+import Circusc from "./circusc";
 import Cischeat from "./cischeat";
 import Citycon from "./citycon";
 import Cluclu from "./cluclu";
@@ -104,6 +105,7 @@ import Congo from "./congo";
 import Contra from "./contra";
 import Cop01 from "./cop01";
 import Cosmccop from "./cosmccop";
+import Crimfght from "./crimfght";
 import Cyberlip from "./cyberlip";
 import Dacholer from "./dacholer";
 import Dangar from "./dangar";
@@ -165,6 +167,7 @@ import Galaga88 from "./galaga88";
 import Galagamk from "./galagamk";
 import Galaxian from "./galaxian";
 import Galivan from "./galivan";
+import Gberet from "./gberet";
 import Gemini from "./gemini";
 import Gground from "./gground";
 import Ghouls from "./ghouls";
@@ -179,6 +182,7 @@ import Guzzler from "./guzzler";
 import Gyruss from "./gyruss";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
+import Hcastle from "./hcastle";
 import Hellfire from "./hellfire";
 import Hharry from "./hharry";
 import Hook from "./hook";
@@ -272,6 +276,7 @@ import Mysticri from "./mysticri";
 import Narc from "./narc";
 import Naughtyb from "./naughtyb";
 import Nbbatman from "./nbbatman";
+import Nemesis from "./nemesis";
 import Ninjaw from "./ninjaw";
 import Ninjemak from "./ninjemak";
 import Nitd from "./nitd";
@@ -321,6 +326,7 @@ import Renegade from "./renegade";
 import Rfjet from "./rfjet";
 import Riskchal from "./riskchal";
 import Rjammer from "./rjammer";
+import Roadf from "./roadf";
 import Robocop from "./robocop";
 import Robocop2 from "./robocop2";
 import Robotron from "./robotron";
@@ -394,6 +400,7 @@ import Terracre from "./terracre";
 import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
+import Thunderx from "./thunderx";
 import Tigerh from "./tigerh";
 import Tigeroad from "./tigeroad";
 import Timeplt from "./timeplt";
@@ -416,11 +423,13 @@ import Twcup90 from "./twcup90";
 import Twincobr from "./twincobr";
 import Twinhawk from "./twinhawk";
 import Twocrude from "./twocrude";
+import Typhoon from "./typhoon";
 import Uccops from "./uccops";
 import Uniwars from "./uniwars";
 import Upndown from "./upndown";
 import Vaportra from "./vaportra";
 import Varth from "./varth";
+import Vendetta from "./vendetta";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
@@ -538,6 +547,7 @@ const extractors: { [romName: string]: any } = {
     'chasehq': Chasehq,
     'chelnov': Chelnov,
     'chinagat': Chinagat,
+    'circusc': Circusc,
     'cischeat': Cischeat,
     'citycon': Citycon,
     'cluclu': Cluclu,
@@ -549,6 +559,7 @@ const extractors: { [romName: string]: any } = {
     'contra': Contra,
     'cop01': Cop01,
     'cosmccop': Cosmccop,
+    'crimfght': Crimfght,
     'cyberlip': Cyberlip,
     'dacholer': Dacholer,
     'dangar': Dangar,
@@ -610,6 +621,7 @@ const extractors: { [romName: string]: any } = {
     'galagamk': Galagamk,
     'galaxian': Galaxian,
     'galivan': Galivan,
+    'gberet': Gberet,
     'gemini': Gemini,
     'gground': Gground,
     'ghouls': Ghouls,
@@ -624,6 +636,7 @@ const extractors: { [romName: string]: any } = {
     'gyruss': Gyruss,
     'hangon': Hangon,
     'hbarrel': Hbarrel,
+    'hcastle': Hcastle,
     'hellfire': Hellfire,
     'hharry': Hharry,
     'hook': Hook,
@@ -717,6 +730,7 @@ const extractors: { [romName: string]: any } = {
     'narc': Narc,
     'naughtyb': Naughtyb,
     'nbbatman': Nbbatman,
+    'nemesis': Nemesis,
     'ninjaw': Ninjaw,
     'ninjemak': Ninjemak,
     'nitd': Nitd,
@@ -766,6 +780,7 @@ const extractors: { [romName: string]: any } = {
     'rfjet': Rfjet,
     'riskchal': Riskchal,
     'rjammer': Rjammer,
+    'roadf': Roadf,
     'robocop': Robocop,
     'robocop2': Robocop2,
     'robotron': Robotron,
@@ -839,6 +854,7 @@ const extractors: { [romName: string]: any } = {
     'terraf': Terraf,
     'tetris': Tetris,
     'thepit': Thepit,
+    'thunderx': Thunderx,
     'tigerh': Tigerh,
     'tigeroad': Tigeroad,
     'timeplt': Timeplt,
@@ -861,11 +877,13 @@ const extractors: { [romName: string]: any } = {
     'twincobr': Twincobr,
     'twinhawk': Twinhawk,
     'twocrude': Twocrude,
+    'typhoon': Typhoon,
     'uccops': Uccops,
     'uniwars': Uniwars,
     'upndown': Upndown,
     'vaportra': Vaportra,
     'varth': Varth,
+    'vendetta': Vendetta,
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,

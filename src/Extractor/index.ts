@@ -62,6 +62,7 @@ import Baddudes from "./baddudes";
 import Bankp from "./bankp";
 import Batman from "./batman";
 import Batsugun from "./batsugun";
+import Battlera from "./battlera";
 import Battroad from "./battroad";
 import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
@@ -145,6 +146,7 @@ import Dommy from "./dommy";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
 import Drgnbstr from "./drgnbstr";
+import Drgninja from "./drgninja";
 import Drmario from "./drmario";
 import Dsoccr94 from "./dsoccr94";
 import Dspirit from "./dspirit";
@@ -375,6 +377,7 @@ import Scobra from "./scobra";
 import Scontra from "./scontra";
 import Scramble from "./scramble";
 import Scregg from "./scregg";
+import Secretag from "./secretag";
 import Seicross from "./seicross";
 import Sf from "./sf";
 import Sf2 from "./sf2";
@@ -558,6 +561,7 @@ const extractors: { [romName: string]: any } = {
     'bankp': Bankp,
     'batman': Batman,
     'batsugun': Batsugun,
+    'battlera': Battlera,
     'battroad': Battroad,
     'bbmanw': Bbmanw,
     'bchopper': Bchopper,
@@ -641,6 +645,7 @@ const extractors: { [romName: string]: any } = {
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
     'drgnbstr': Drgnbstr,
+    'drgninja': Drgninja,
     'drmario': Drmario,
     'dsoccr94': Dsoccr94,
     'dspirit': Dspirit,
@@ -871,6 +876,7 @@ const extractors: { [romName: string]: any } = {
     'scontra': Scontra,
     'scramble': Scramble,
     'scregg': Scregg,
+    'secretag': Secretag,
     'seicross': Seicross,
     'sf': Sf,
     'sf2': Sf2,

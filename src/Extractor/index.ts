@@ -67,9 +67,11 @@ import Bchopper from "./bchopper";
 import Bigrun from "./bigrun";
 import Blaster from "./blaster";
 import Bldwolf from "./bldwolf";
+import Blockout3 from "./blockout3";
 import Bmaster from "./bmaster";
 import Bnj from "./bnj";
 import Bnzabros from "./bnzabros";
+import Bogeyman from "./bogeyman";
 import Bombjack from "./bombjack";
 import Bosco from "./bosco";
 import Bouldash from "./bouldash";
@@ -88,6 +90,7 @@ import Centiped from "./centiped";
 import Challeng from "./challeng";
 import Chasehq from "./chasehq";
 import Chelnov from "./chelnov";
+import Chinagat from "./chinagat";
 import Cischeat from "./cischeat";
 import Citycon from "./citycon";
 import Cluclu from "./cluclu";
@@ -126,6 +129,7 @@ import Dkong3 from "./dkong3";
 import Dkongjr from "./dkongjr";
 import Docastle from "./docastle";
 import Dogyuun from "./dogyuun";
+import Dommy from "./dommy";
 import Donpachi from "./donpachi";
 import Dorunrun from "./dorunrun";
 import Drmario from "./drmario";
@@ -227,9 +231,11 @@ import Lomakai from "./lomakai";
 import Lotlot from "./lotlot";
 import Magmax from "./magmax";
 import Majtitle from "./majtitle";
+import Maniach from "./maniach";
 import Mappy from "./mappy";
 import Marble from "./marble";
 import Mario from "./mario";
+import Matmania from "./matmania";
 import Mazinger from "./mazinger";
 import Mercs from "./mercs";
 import Midres from "./midres";
@@ -238,6 +244,7 @@ import Milliped from "./milliped";
 import Missile from "./missile";
 import Mk from "./mk";
 import Mk2 from "./mk2";
+import Mmonkey from "./mmonkey";
 import Mnchmobl from "./mnchmobl";
 import Momoko from "./momoko";
 import Mooncrst from "./mooncrst";
@@ -304,6 +311,7 @@ import Rdft from "./rdft";
 import Rdft2 from "./rdft2";
 import Reactor from "./reactor";
 import Redalert from "./redalert";
+import Renegade from "./renegade";
 import Rfjet from "./rfjet";
 import Riskchal from "./riskchal";
 import Rjammer from "./rjammer";
@@ -323,6 +331,7 @@ import Scion from "./scion";
 import Scobra from "./scobra";
 import Scontra from "./scontra";
 import Scramble from "./scramble";
+import Scregg from "./scregg";
 import Seicross from "./seicross";
 import Sf from "./sf";
 import Sf2 from "./sf2";
@@ -331,6 +340,7 @@ import Sf2hf from "./sf2hf";
 import Sfa from "./sfa";
 import Sfa2 from "./sfa2";
 import Sfa3 from "./sfa3";
+import Shadfrce from "./shadfrce";
 import Sharrier from "./sharrier";
 import Sheriff from "./sheriff";
 import Shinobi from "./shinobi";
@@ -411,6 +421,7 @@ import Wboy from "./wboy";
 import Willow from "./willow";
 import Wiping from "./wiping";
 import Wiz from "./wiz";
+import Wwfwfest from "./wwfwfest";
 import Xevious from "./xevious";
 import Xmcota from "./xmcota";
 import Xmen from "./xmen";
@@ -492,9 +503,11 @@ const extractors: { [romName: string]: any } = {
     'bigrun': Bigrun,
     'blaster': Blaster,
     'bldwolf': Bldwolf,
+    'blockout3': Blockout3,
     'bmaster': Bmaster,
     'bnj': Bnj,
     'bnzabros': Bnzabros,
+    'bogeyman': Bogeyman,
     'bombjack': Bombjack,
     'bosco': Bosco,
     'bouldash': Bouldash,
@@ -513,6 +526,7 @@ const extractors: { [romName: string]: any } = {
     'challeng': Challeng,
     'chasehq': Chasehq,
     'chelnov': Chelnov,
+    'chinagat': Chinagat,
     'cischeat': Cischeat,
     'citycon': Citycon,
     'cluclu': Cluclu,
@@ -551,6 +565,7 @@ const extractors: { [romName: string]: any } = {
     'dkongjr': Dkongjr,
     'docastle': Docastle,
     'dogyuun': Dogyuun,
+    'dommy': Dommy,
     'donpachi': Donpachi,
     'dorunrun': Dorunrun,
     'drmario': Drmario,
@@ -652,9 +667,11 @@ const extractors: { [romName: string]: any } = {
     'lotlot': Lotlot,
     'magmax': Magmax,
     'majtitle': Majtitle,
+    'maniach': Maniach,
     'mappy': Mappy,
     'marble': Marble,
     'mario': Mario,
+    'matmania': Matmania,
     'mazinger': Mazinger,
     'mercs': Mercs,
     'midres': Midres,
@@ -663,6 +680,7 @@ const extractors: { [romName: string]: any } = {
     'missile': Missile,
     'mk': Mk,
     'mk2': Mk2,
+    'mmonkey': Mmonkey,
     'mnchmobl': Mnchmobl,
     'momoko': Momoko,
     'mooncrst': Mooncrst,
@@ -729,6 +747,7 @@ const extractors: { [romName: string]: any } = {
     'rdft2': Rdft2,
     'reactor': Reactor,
     'redalert': Redalert,
+    'renegade': Renegade,
     'rfjet': Rfjet,
     'riskchal': Riskchal,
     'rjammer': Rjammer,
@@ -748,6 +767,7 @@ const extractors: { [romName: string]: any } = {
     'scobra': Scobra,
     'scontra': Scontra,
     'scramble': Scramble,
+    'scregg': Scregg,
     'seicross': Seicross,
     'sf': Sf,
     'sf2': Sf2,
@@ -756,6 +776,7 @@ const extractors: { [romName: string]: any } = {
     'sfa': Sfa,
     'sfa2': Sfa2,
     'sfa3': Sfa3,
+    'shadfrce': Shadfrce,
     'sharrier': Sharrier,
     'sheriff': Sheriff,
     'shinobi': Shinobi,
@@ -836,6 +857,7 @@ const extractors: { [romName: string]: any } = {
     'willow': Willow,
     'wiping': Wiping,
     'wiz': Wiz,
+    'wwfwfest': Wwfwfest,
     'xevious': Xevious,
     'xmcota': Xmcota,
     'xmen': Xmen,

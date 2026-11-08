@@ -183,6 +183,7 @@ import Gground from "./gground";
 import Ghouls from "./ghouls";
 import Gng from "./gng";
 import Gorf from "./gorf";
+import Gpilots from "./gpilots";
 import Gradius from "./gradius";
 import Gravitar from "./gravitar";
 import Grindstm from "./grindstm";
@@ -194,12 +195,14 @@ import Guzzler from "./guzzler";
 import Gyruss from "./gyruss";
 import Hachamfa from "./hachamfa";
 import Hangon from "./hangon";
+import Hasamu from "./hasamu";
 import Hbarrel from "./hbarrel";
 import Hcastle from "./hcastle";
 import Headon2 from "./headon2";
 import Heatbrl from "./heatbrl";
 import Hellfire from "./hellfire";
 import Hharry from "./hharry";
+import Higemaru from "./higemaru";
 import Hook from "./hook";
 import Horekid from "./horekid";
 import Horizon from "./horizon";
@@ -255,6 +258,7 @@ import Lnc from "./lnc";
 import Loht from "./loht";
 import Lomakai from "./lomakai";
 import Lotlot from "./lotlot";
+import Madcrash from "./madcrash";
 import Magmax from "./magmax";
 import Majtitle from "./majtitle";
 import Maniach from "./maniach";
@@ -470,6 +474,7 @@ import Wardner from "./wardner";
 import Wb3 from "./wb3";
 import Wboy from "./wboy";
 import Willow from "./willow";
+import Wilytowr from "./wilytowr";
 import Wiping from "./wiping";
 import Wiz from "./wiz";
 import Wwfwfest from "./wwfwfest";
@@ -671,6 +676,7 @@ const extractors: { [romName: string]: any } = {
     'ghouls': Ghouls,
     'gng': Gng,
     'gorf': Gorf,
+    'gpilots': Gpilots,
     'gradius': Gradius,
     'gravitar': Gravitar,
     'grindstm': Grindstm,
@@ -682,12 +688,14 @@ const extractors: { [romName: string]: any } = {
     'gyruss': Gyruss,
     'hachamfa': Hachamfa,
     'hangon': Hangon,
+    'hasamu': Hasamu,
     'hbarrel': Hbarrel,
     'hcastle': Hcastle,
     'headon2': Headon2,
     'heatbrl': Heatbrl,
     'hellfire': Hellfire,
     'hharry': Hharry,
+    'higemaru': Higemaru,
     'hook': Hook,
     'horekid': Horekid,
     'horizon': Horizon,
@@ -743,6 +751,7 @@ const extractors: { [romName: string]: any } = {
     'loht': Loht,
     'lomakai': Lomakai,
     'lotlot': Lotlot,
+    'madcrash': Madcrash,
     'magmax': Magmax,
     'majtitle': Majtitle,
     'maniach': Maniach,
@@ -958,6 +967,7 @@ const extractors: { [romName: string]: any } = {
     'wb3': Wb3,
     'wboy': Wboy,
     'willow': Willow,
+    'wilytowr': Wilytowr,
     'wiping': Wiping,
     'wiz': Wiz,
     'wwfwfest': Wwfwfest,

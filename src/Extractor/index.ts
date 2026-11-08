@@ -55,6 +55,7 @@ import Asterix from "./asterix";
 import Asteroid from "./asteroid";
 import Astyanax from "./astyanax";
 import Atetris from "./atetris";
+import Avengers from "./avengers";
 import Avsp from "./avsp";
 import Avspirit from "./avspirit";
 import Baddudes from "./baddudes";
@@ -65,6 +66,7 @@ import Battroad from "./battroad";
 import Bbmanw from "./bbmanw";
 import Bchopper from "./bchopper";
 import Bigrun from "./bigrun";
+import Bionicc from "./bionicc";
 import Blaster from "./blaster";
 import Bldwolf from "./bldwolf";
 import Blockout3 from "./blockout3";
@@ -97,6 +99,7 @@ import Cluclu from "./cluclu";
 import Cninja from "./cninja";
 import Cobracom from "./cobracom";
 import Columns from "./columns";
+import Commando from "./commando";
 import Congo from "./congo";
 import Contra from "./contra";
 import Cop01 from "./cop01";
@@ -206,6 +209,7 @@ import Kidniki from "./kidniki";
 import Kikcubic from "./kikcubic";
 import Kncljoe from "./kncljoe";
 import Knights from "./knights";
+import Kod from "./kod";
 import Kof2000 from "./kof2000";
 import Kof2001 from "./kof2001";
 import Kof2002 from "./kof2002";
@@ -259,6 +263,8 @@ import Mslug from "./mslug";
 import Mslug2 from "./mslug2";
 import Mslug3 from "./mslug3";
 import Mslugx from "./mslugx";
+import Msword from "./msword";
+import Mtwins from "./mtwins";
 import Mutantf from "./mutantf";
 import Mvsc from "./mvsc";
 import Mwalk from "./mwalk";
@@ -349,6 +355,7 @@ import Sidepckt from "./sidepckt";
 import Silkworm from "./silkworm";
 import Simpsons from "./simpsons";
 import Sinistar from "./sinistar";
+import Slammast from "./slammast";
 import Slyspy from "./slyspy";
 import Smashtv from "./smashtv";
 import Snowbro2 from "./snowbro2";
@@ -388,6 +395,7 @@ import Terraf from "./terraf";
 import Tetris from "./tetris";
 import Thepit from "./thepit";
 import Tigerh from "./tigerh";
+import Tigeroad from "./tigeroad";
 import Timeplt from "./timeplt";
 import Tmnt from "./tmnt";
 import Tmnt2 from "./tmnt2";
@@ -412,6 +420,7 @@ import Uccops from "./uccops";
 import Uniwars from "./uniwars";
 import Upndown from "./upndown";
 import Vaportra from "./vaportra";
+import Varth from "./varth";
 import Vf from "./vf";
 import Vigilant from "./vigilant";
 import Viprp1 from "./viprp1";
@@ -491,6 +500,7 @@ const extractors: { [romName: string]: any } = {
     'asteroid': Asteroid,
     'astyanax': Astyanax,
     'atetris': Atetris,
+    'avengers': Avengers,
     'avsp': Avsp,
     'avspirit': Avspirit,
     'baddudes': Baddudes,
@@ -501,6 +511,7 @@ const extractors: { [romName: string]: any } = {
     'bbmanw': Bbmanw,
     'bchopper': Bchopper,
     'bigrun': Bigrun,
+    'bionicc': Bionicc,
     'blaster': Blaster,
     'bldwolf': Bldwolf,
     'blockout3': Blockout3,
@@ -533,6 +544,7 @@ const extractors: { [romName: string]: any } = {
     'cninja': Cninja,
     'cobracom': Cobracom,
     'columns': Columns,
+    'commando': Commando,
     'congo': Congo,
     'contra': Contra,
     'cop01': Cop01,
@@ -642,6 +654,7 @@ const extractors: { [romName: string]: any } = {
     'kikcubic': Kikcubic,
     'kncljoe': Kncljoe,
     'knights': Knights,
+    'kod': Kod,
     'kof2000': Kof2000,
     'kof2001': Kof2001,
     'kof2002': Kof2002,
@@ -695,6 +708,8 @@ const extractors: { [romName: string]: any } = {
     'mslug2': Mslug2,
     'mslug3': Mslug3,
     'mslugx': Mslugx,
+    'msword': Msword,
+    'mtwins': Mtwins,
     'mutantf': Mutantf,
     'mvsc': Mvsc,
     'mwalk': Mwalk,
@@ -785,6 +800,7 @@ const extractors: { [romName: string]: any } = {
     'silkworm': Silkworm,
     'simpsons': Simpsons,
     'sinistar': Sinistar,
+    'slammast': Slammast,
     'slyspy': Slyspy,
     'smashtv': Smashtv,
     'snowbro2': Snowbro2,
@@ -824,6 +840,7 @@ const extractors: { [romName: string]: any } = {
     'tetris': Tetris,
     'thepit': Thepit,
     'tigerh': Tigerh,
+    'tigeroad': Tigeroad,
     'timeplt': Timeplt,
     'tmnt': Tmnt,
     'tmnt2': Tmnt2,
@@ -848,6 +865,7 @@ const extractors: { [romName: string]: any } = {
     'uniwars': Uniwars,
     'upndown': Upndown,
     'vaportra': Vaportra,
+    'varth': Varth,
     'vf': Vf,
     'vigilant': Vigilant,
     'viprp1': Viprp1,

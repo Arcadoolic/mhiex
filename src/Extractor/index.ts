@@ -84,6 +84,7 @@ import Bublbobl from "./bublbobl";
 import Bzone from "./bzone";
 import Captaven from "./captaven";
 import Captcomm from "./captcomm";
+import Carnival from "./carnival";
 import Cbuster from "./cbuster";
 import Ccastles from "./ccastles";
 import Cclimber from "./cclimber";
@@ -189,6 +190,7 @@ import Gyruss from "./gyruss";
 import Hangon from "./hangon";
 import Hbarrel from "./hbarrel";
 import Hcastle from "./hcastle";
+import Headon2 from "./headon2";
 import Hellfire from "./hellfire";
 import Hharry from "./hharry";
 import Hook from "./hook";
@@ -406,6 +408,7 @@ import Supbtime from "./supbtime";
 import Superman from "./superman";
 import Superpac from "./superpac";
 import Suprmrio from "./suprmrio";
+import Tacscan from "./tacscan";
 import Tapper from "./tapper";
 import Targ from "./targ";
 import Tekipaki from "./tekipaki";
@@ -433,6 +436,7 @@ import Truxton from "./truxton";
 import Truxton2 from "./truxton2";
 import Tturf from "./tturf";
 import Tumblep from "./tumblep";
+import Turbo from "./turbo";
 import Tutankhm from "./tutankhm";
 import Twcup90 from "./twcup90";
 import Twincobr from "./twincobr";
@@ -463,6 +467,7 @@ import Xmvsf from "./xmvsf";
 import Yiear from "./yiear";
 import Youjyudn from "./youjyudn";
 import Zaxxon from "./zaxxon";
+import Zektor from "./zektor";
 import Zerowing from "./zerowing";
 import Zoar from "./zoar";
 
@@ -553,6 +558,7 @@ const extractors: { [romName: string]: any } = {
     'bzone': Bzone,
     'captaven': Captaven,
     'captcomm': Captcomm,
+    'carnival': Carnival,
     'cbuster': Cbuster,
     'ccastles': Ccastles,
     'cclimber': Cclimber,
@@ -658,6 +664,7 @@ const extractors: { [romName: string]: any } = {
     'hangon': Hangon,
     'hbarrel': Hbarrel,
     'hcastle': Hcastle,
+    'headon2': Headon2,
     'hellfire': Hellfire,
     'hharry': Hharry,
     'hook': Hook,
@@ -875,6 +882,7 @@ const extractors: { [romName: string]: any } = {
     'superman': Superman,
     'superpac': Superpac,
     'suprmrio': Suprmrio,
+    'tacscan': Tacscan,
     'tapper': Tapper,
     'targ': Targ,
     'tekipaki': Tekipaki,
@@ -902,6 +910,7 @@ const extractors: { [romName: string]: any } = {
     'truxton2': Truxton2,
     'tturf': Tturf,
     'tumblep': Tumblep,
+    'turbo': Turbo,
     'tutankhm': Tutankhm,
     'twcup90': Twcup90,
     'twincobr': Twincobr,
@@ -932,6 +941,7 @@ const extractors: { [romName: string]: any } = {
     'yiear': Yiear,
     'youjyudn': Youjyudn,
     'zaxxon': Zaxxon,
+    'zektor': Zektor,
     'zerowing': Zerowing,
     'zoar': Zoar,
 }

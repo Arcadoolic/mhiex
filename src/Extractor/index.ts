@@ -262,6 +262,8 @@ import Loht from "./loht";
 import Lomakai from "./lomakai";
 import Lotlot from "./lotlot";
 import Madcrash from "./madcrash";
+import Magdrop2 from "./magdrop2";
+import Magdrop3 from "./magdrop3";
 import Magmax from "./magmax";
 import Majtitle from "./majtitle";
 import Maniach from "./maniach";
@@ -760,6 +762,8 @@ const extractors: { [romName: string]: any } = {
     'lomakai': Lomakai,
     'lotlot': Lotlot,
     'madcrash': Madcrash,
+    'magdrop2': Magdrop2,
+    'magdrop3': Magdrop3,
     'magmax': Magmax,
     'majtitle': Majtitle,
     'maniach': Maniach,

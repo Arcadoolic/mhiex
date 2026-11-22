@@ -277,7 +277,6 @@ import Midres from "./midres";
 import Mightguy from "./mightguy";
 import Milliped from "./milliped";
 import Missile from "./missile";
-import Mk from "./mk";
 import Mk2 from "./mk2";
 import Mmonkey from "./mmonkey";
 import Mnchmobl from "./mnchmobl";
@@ -776,7 +775,6 @@ const extractors: { [romName: string]: any } = {
     'mightguy': Mightguy,
     'milliped': Milliped,
     'missile': Missile,
-    'mk': Mk,
     'mk2': Mk2,
     'mmonkey': Mmonkey,
     'mnchmobl': Mnchmobl,

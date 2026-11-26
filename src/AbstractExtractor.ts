@@ -1,12 +1,13 @@
 import {existsSync, readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
-import {ExtractorFiles, ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
+import {ExtractorFiles, ExtractorOptionsData, ExtractorOptionsDataCharacters, ModeTables, Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';
     private hasHi: boolean | 'optional' = false;
     private nvramName = '';
+    private modeTables: ModeTables = {};
 
     protected hi?: MHEBuffer;
     protected nvram?: MHEBuffer;
@@ -29,6 +30,11 @@ export default abstract class AbstractExtractor {
 
     public get scores(): Output {
         return this.output;
+    }
+
+    /** The tables ranking a game mode of their own; empty for a game with one table only */
+    public get tables(): ModeTables {
+        return this.modeTables;
     }
 
     /** Files the extractor reads, relative to the MAME directory */

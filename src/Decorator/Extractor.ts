@@ -7,6 +7,7 @@ export default function Extractor(options: ExtractorOptions) {
             hasHi = options.hi === undefined ? true : options.hi;
             nvramName = options.nvram || false;
             data = options.data;
+            modeTables = options.tables || {};
         }
     }
 }

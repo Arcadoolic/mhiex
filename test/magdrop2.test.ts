@@ -6,6 +6,9 @@ import { resolve } from "path";
 it('magdrop2', async () => {
     const a = new MameHiExtractor(resolve(__dirname, '../demo-hiscores'))
     const extractor = await a.get('magdrop2')
+    expect(extractor?.tables).toEqual({ default: 'Puzzle', vs_cpu: 'VS CPU' })
+    expect(a.tables('magdrop2')).toEqual(extractor?.tables)
+    expect(a.tables('raiden')).toEqual({})
     expect(extractor?.extract().scores).toEqual({
         default: [
             { rank: 1, score: 38340, name: 'DEF' },
@@ -15,7 +18,7 @@ it('magdrop2', async () => {
             { rank: 5, score: 34380, name: 'PQR' },
         ],
         extras: {
-            table1: [
+            vs_cpu: [
                 { rank: 1, score: 16120, name: 'ABC' },
                 { rank: 2, score: 15130, name: 'DEF' },
                 { rank: 3, score: 14140, name: 'GHI' },

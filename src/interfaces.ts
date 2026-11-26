@@ -28,6 +28,13 @@ export interface ExtractorOptions {
     hi?: boolean | 'optional',
     nvram?: string;
     data?: ExtractorOptionsData;
+    tables?: ModeTables;
+}
+
+// The tables that rank a game mode of their own, with the mode's name: 'default' and ids of
+// `extras`. Extras not listed here are not leaderboards.
+export interface ModeTables {
+    [id: string]: string;
 }
 
 export interface ExtractorOptionsData {

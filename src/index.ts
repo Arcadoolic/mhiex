@@ -1,7 +1,7 @@
 import AbstractExtractor from "./AbstractExtractor";
-import {ExtractorFiles} from "./interfaces";
+import {ExtractorFiles, ModeTables} from "./interfaces";
 
-export type {ExtractorFiles} from "./interfaces";
+export type {ExtractorFiles, ModeTables} from "./interfaces";
 import extractors from "./Extractor";
 
 
@@ -27,6 +27,14 @@ export class MameHiExtractor {
      */
     public files(romName: string): ExtractorFiles | null {
         return extractors[romName] ? (new extractors[romName]() as AbstractExtractor).files : null
+    }
+
+    /**
+     * The mode tables of a game, without reading its files; empty when it has one table only
+     * @param romName
+     */
+    public tables(romName: string): ModeTables {
+        return extractors[romName] ? (new extractors[romName]() as AbstractExtractor).tables : {}
     }
 
     /**
